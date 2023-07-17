@@ -20,9 +20,13 @@ body{
     color: white;
 }
 
-.nav a:hover{
+/* .nav a:hover{
     text-decoration: underline;
     color: #3A4F50;
+} */
+
+.nav-profile-item{
+    margin-right: 0;
 }
 
 .texto{
