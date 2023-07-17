@@ -33,6 +33,10 @@ body{
     color: #EEEEEE;
 }
 
+a{
+    text-decoration: none;
+}
+
 .contador-likes-views{
     color: #EEEEEE;
     font-size:12px;
@@ -99,5 +103,27 @@ SVG Icons - svgicons.sparkk.fr
     stroke-width: 1;
   }
 
+  /* Icono de crear publicacio  */
+
+  .svg-icon-mas {
+    width: 3.2em;
+    height: 3.2em;
+  }
+  
+  .svg-icon-mas path,
+  .svg-icon-mas polygon,
+  .svg-icon-mas rect {
+    fill: #0EF6CC;
+  }
+  
+  .svg-icon-mas circle {
+    stroke: #0EF6CC;
+    stroke-width: 1;
+  }
+
+  /* iconos de fontawesome  */
+  .icons{
+    color: #0EF6CC;
+  }
 
 
