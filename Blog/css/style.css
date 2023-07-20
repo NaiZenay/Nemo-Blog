@@ -52,16 +52,24 @@ a{
 }
 
 .coment-post{
-    border: none;
     color: #EEEEEE;
     background-color: #1B2223;
 }
 .coment-post:focus{
     background-color: #1B2223;
     color: #EEEEEE;
-    border: none;
 }
 
+.creando-Post{
+    border: none;
+    color: #EEEEEE;
+    background-color: #1B2223;
+}
+.creando-Post:focus{
+    background-color: #1B2223;
+    color: #EEEEEE;
+    border: none;
+}
 
 
 @media(max-width:480px){
