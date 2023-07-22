@@ -1,5 +1,4 @@
 // Responsive el cuerpo pricipal del post segun el tamaño de la pantalla 
-
 document.addEventListener('DOMContentLoaded',()=>{
     mainPost=document.querySelector('#main-post');
     if(screen.width <= 480 ){

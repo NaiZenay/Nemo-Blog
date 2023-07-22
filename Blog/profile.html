@@ -23,8 +23,8 @@
       <div class="container-fluid">
 
         <a class="navbar-brand" href="index.html">
-        <button class=" btn">
-          <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="50" height="50">
+          <button class=" btn">
+            <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="50" height="50">
           </button>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -123,181 +123,258 @@
   </header>
 
   <main>
-    <section class="container mt-4 p-2">
+    <div class="container">
+      <div class="row p-2">
+        <!-- nombre y apodo  -->
+        <div class="col mb-3 mt-3">
+          <h4 class="texto fs-5 m-1">Nombre y Apellido</h4>
+          <br>
+          <h4 class="texto fs-5 m-1">Apodo</h4>
+        </div>
+        <!-- img de perfil  -->
+        <div class="col">
+          <img class="author-img rounded-circle float-end m-3" src="img/Logo.png">
+        </div>
+        <div class="w-100"></div>
 
-      <div class="container">
-        <button class="btn d-block mx-auto">
-          <img class="rounded-circle mb-3" style="width: 120px; height: 120px;" src="/img/Logo.png" alt="">
-        </button>
-        <hr>
-        <div class="row secundario rounded-3 p-5 mb-4">
-          <div class="col">
-            <ul class="list-group list-group-flush">
+        <!-- followers & following  -->
+        <div class="col">
+          <!-- Button seguidores modal -->
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seguidores">
+            <span class="texto w-100">Seguidores</span>
+            <br>
+            <i class="fa-solid fa-users icons fa-xl mt-3"></i>
+            <span class="texto">123</span>
+          </button>
 
-              <li class="list-group-item secundario">
-                Nombre:
-                <br>
-                <span>Ian</span>
-                <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Nombre_Modal">
-                  <i class="fa-regular fa-pen-to-square icons"></i>
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="edit_Nombre_Modal" tabindex="-1" aria-labelledby="edit_Nombre_Modal"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content secundario">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="edit_Nombre_Modal">Editar Nombre</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-
-                      <div class="modal-body">
-                        <div class="input-group mb-3">
-                          <input type="text" placeholder="Nombre" class="form-control coment-post" id="">
-                          <span class="input-group-text primario border-0" id="basic-addon2">
-                            <button type="submit" class="btn btn-success">
-                              Editar
-                            </button>
-                          </span>
+          <!-- Modal -->
+          <div class="modal fade" id="seguidores" tabindex="-1" aria-labelledby="seguidores" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-scrollable">
+              <div class="modal-content primario">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="seguidores">Seguidores <span>123</span></h5>
+                  <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark icons"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ul class="list-group-flush">
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
                         </div>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </li>
-
-              <li class="list-group-item secundario">
-
-                Apellido:
-                <br>
-                <span>Yañez</span>
-                <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Apellido_Modal">
-                  <i class="fa-regular fa-pen-to-square icons"></i>
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="edit_Apellido_Modal" tabindex="-1" aria-labelledby="edit_Apellido_Modal"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content secundario">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="edit_Apellido_Modal">Editar Apellido</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-
-                      <div class="modal-body">
-                        <div class="input-group mb-3">
-                          <input type="text" placeholder="Apellido" class="form-control coment-post" id="">
-                          <span class="input-group-text primario border-0" id="basic-addon2">
-                            <button type="submit" class="btn btn-success">
-                              Editar
-                            </button>
-                          </span>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
                         </div>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </li>
-              <li class="list-group-item secundario">
-                Apodo:
-                <br>
-                <span>Nemo</span>
-                <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Apodo_Modal">
-                  <i class="fa-regular fa-pen-to-square icons"></i>
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="edit_Apodo_Modal" tabindex="-1" aria-labelledby="edit_Apodo_Modal"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content secundario">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="edit_Apodo_Modal">Editar Apodo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-
-                      <div class="modal-body">
-                        <div class="input-group mb-3">
-                          <input type="text" placeholder="Apodo" class="form-control coment-post" id="">
-                          <span class="input-group-text primario border-0" id="basic-addon2">
-                            <button type="submit" class="btn btn-success">
-                              Editar
-                            </button>
-                          </span>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
                         </div>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-              </li>
-              <li class="list-group-item secundario">
-                Correo:
-                <br>
-                <span>naizenay@gmail.com</span>
-                <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Correo_Modal">
-                  <i class="fa-regular fa-pen-to-square icons"></i>
-                </button>
-
-
-                <!-- Modal -->
-                <div class="modal fade" id="edit_Correo_Modal" tabindex="-1" aria-labelledby="edit_Correo_Modal"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content secundario">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="edit_Correo_Modal">Editar Correo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-
-                      <div class="modal-body">
-                        <div class="input-group mb-3">
-                          <input type="text" placeholder="Correo@correo.com" class="form-control coment-post" id="">
-                          <span class="input-group-text primario border-0" id="basic-addon2">
-                            <button type="submit" class="btn btn-success">
-                              Editar
-                            </button>
-                          </span>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
                         </div>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
                       </div>
-
-                    </div>
-                  </div>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                   
+                  </ul>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="col">
+          <!-- Button seguidos modal -->
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#seguidos">
+            <span class="texto w-100">Seguidos</span>
+            <br>
+            <i class="fa-solid fa-users icons fa-xl mt-3"></i>
+            <span class="texto">123</span>
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="seguidos" tabindex="-1" aria-labelledby="seguidos" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-scrollable">
+              <div class="modal-content primario">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="seguidos">Seguidos <span>123</span></h5>
+                  <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark icons"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ul class="list-group-flush">
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item primario">
+                      <div class="row align-items-start">
+                        <div class="col-2">
+                          <a href="#">
+                            <img class="rounded-circle m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
+                          </a>
+                        </div>
+                        <div class="col-10">
+                          <p class="mt-2">
+                            Nombre de usuario
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="bg-light mt-2 mb-2">
+
+        <!-- Posts  -->
+        <div>
+
+        </div>
+
       </div>
 
 
 
-
-
-    </section>
+    </div>
   </main>
 
 
@@ -337,7 +414,6 @@
   </footer>
 
 
-  <script src="../js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
