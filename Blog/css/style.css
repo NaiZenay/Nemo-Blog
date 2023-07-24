@@ -51,6 +51,16 @@ a{
     display: none;
 }
 
+.bton{
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.no-Visible{
+    display: none;
+}
+
 .coment-post{
     color: #EEEEEE;
     background-color: #1B2223;
