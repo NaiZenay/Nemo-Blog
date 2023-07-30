@@ -158,6 +158,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
+
                   <ul class="list-group-flush">
                     <li class="list-group-item primario">
                       <div class="row align-items-start">
@@ -271,6 +272,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
+
                   <ul class="list-group-flush">
                     <li class="list-group-item primario">
                       <div class="row align-items-start">
@@ -363,56 +365,90 @@
           </div>
         </div>
 
-        <hr class="bg-light mt-2 mb-2">
+        <hr class="bg-light mt-4 mb-4">
+      </div>
+
+
 
         <!-- Posts  -->
-        <div>
+        <div class="accordion accordion-flush mb-4 mt-2 fondo" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+                <h3 class="texto post-perfil ms-2">
+                  <span class="fecha">dd/mm/yyyy</span>
+                  <br>
+                  Titulo de post                 
+                </h3>
 
-        </div>
-
-      </div>
-      <div>
-        <ul>
-          <li class="row">
-            <div class="col-3">
-              <p class="fecha">dd/mm/yyyy</p>
-
-              <img class="author-img-posts rounded-circle m-4 d-block mx-auto" src="img/Logo.png">
-            </div>
-
-            <div class="col-6">
-
-              <h4 class="texto">
-                Apodo
-              </h4>
-              <h2 class="texto post-perfil">Titulo de post</h2>
-
-              <div class="row mt-4">
-                <!-- Me gusta  -->
-                <div class="col-3">
-                  <i id="like_icon" class="fa-regular fa-heart icons fa-xl"></i>
-                </div>
-                <!-- Comentario  -->
-                <div class="col-3">
-                  <i class="fa-regular fa-message icons fa-xl"></i>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body border border-light p-4">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+                condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+                praesent
+                ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
+                tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+                scelerisque mauris vivamus. elementum.
+                <div class="d-flex mt-3">
+                  <!-- Me gusta  -->
+                  <div class="m-2" >
+                    <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                  </div>
+                  <!-- Comentario  -->
+                  <div class="m-2" >
+                    <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                  </div>
+                  <!-- tags  -->
+                  <div class="m-2" >
+                    <div class="dropdown mb-3 d-block mx-auto">
+                      <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Ver tags
+                      </button>
+                      <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                          <a class="dropdown-item primario" href="#">
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                              </path>
+                            </svg>
+                            -Tag
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                              </path>
+                            </svg>
+                            -Tag
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                              </path>
+                            </svg>
+                            -Tag
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
-
             </div>
+          </div>
 
-            <div class="ver-mas col-2 p-3">
-              <button type="button" class="btn btn-outline-success mt-4 d-block mx-auto">
-                Ver más
-              </button>
-            </div>
-          </li>
-          <hr class="bg-light mt-2 mb-2">
-          
-        </ul>
-
-      </div>
-
-
+        </div>
     </div>
   </main>
 
