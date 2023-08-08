@@ -32,6 +32,11 @@ body {
 
 .texto {
     color: #EEEEEE;
+    text-decoration: none;
+}
+.texto:hover{
+    color: #EEEEEE;
+    text-decoration: none;
 }
 
 a {
@@ -193,6 +198,11 @@ SVG Icons - svgicons.sparkk.fr
 .crear-post {
     color: #0EF6CC;
     font-size: 4em;
+}
+
+/* Modificando Bootstrap  */
+.nav-link:hover{
+    text-decoration: none;
 }
 
 .accordion-button:not(.collapsed) {
