@@ -26,11 +26,6 @@ body {
     color: white;
 }
 
-/* .nav a:hover{
-    text-decoration: underline;
-    color: #3A4F50;
-} */
-
 .nav-profile-item {
     margin-right: 0;
 }
@@ -41,6 +36,12 @@ body {
 
 a {
     text-decoration: none;
+    color: #0EF6CC;
+}
+a:hover{
+    text-decoration: underline;
+    color: #0EF6CC;
+
 }
 
 .contador-likes-views {
@@ -82,13 +83,13 @@ a {
     color: #EEEEEE;
 }
 
-.creando-Post {
+.creando-Post-Form {
     border: none;
     color: #EEEEEE;
     background-color: #1B2223;
 }
 
-.creando-Post:focus {
+.creando-Post-Form:focus {
     background-color: #1B2223;
     color: #EEEEEE;
     border: none;
@@ -96,6 +97,16 @@ a {
 .fecha{
     font-size: 12px;
     color: gray;
+}
+
+.login-inputs {
+    color: #EEEEEE;
+    background-color: #1B2223;
+}
+
+.login-inputs:focus {
+    background-color: #1B2223;
+    color: #EEEEEE;
 }
 
 @media(max-width:480px) {
@@ -156,7 +167,7 @@ SVG Icons - svgicons.sparkk.fr
     stroke-width: 1;
 }
 
-/* Icono de crear publicacio  */
+/* Icono de crear publicacion  */
 
 .svg-icon-mas {
     width: 3.2em;
