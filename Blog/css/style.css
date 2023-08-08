@@ -208,3 +208,8 @@ SVG Icons - svgicons.sparkk.fr
 .accordion-button:not(.collapsed) {
     background-color: #1B2223;
 }
+
+.form-select{
+    background-color: #1B2223;
+    color: white;
+}
