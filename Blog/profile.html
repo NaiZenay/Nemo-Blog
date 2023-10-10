@@ -86,18 +86,18 @@
                 </li>
                 <li>
                   <hr class="dropdown-divider">
-              </li>
+                </li>
 
-              <li>
+                <li>
                   <a class="dropdown-item texto" href="#">
-                      <svg class="svg-icon" viewBox="0 0 20 20">
-                          <path fill="none"
-                              d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
-                          </path>
-                      </svg>
-                      Cerrar sesion
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                      <path fill="none"
+                        d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+                      </path>
+                    </svg>
+                    Cerrar sesion
                   </a>
-              </li>
+                </li>
               </ul>
             </li>
           </ul>
@@ -111,16 +111,35 @@
     <div class="container">
       <div class="row p-2">
         <!-- nombre y apodo  -->
-        <div class="col mb-3 mt-3">
+        <div class="col mb-2 mt-3">
           <h4 class="texto fs-5 m-1">Nombre y Apellido</h4>
           <br>
           <h4 class="texto fs-5 m-1">Apodo</h4>
+          <br>
         </div>
+
         <!-- img de perfil  -->
         <div class="col">
           <img class="author-img rounded-circle float-end m-3" src="img/Logo.png">
         </div>
+
         <div class="w-100"></div>
+
+
+        <!-- Acerca de  -->
+        <div class="row mb-3 w-100">
+          <h4 class="texto fs-5 m-1">Acerca de:</h4>
+          <p class="texto">
+            Lorem ipsum dolor sit amet consectetur adipiscing, elit curabitur nulla accumsan iaculis erat, magnis lacus
+            aliquet quam sapien. Vestibulum litora ultrices diam iaculis duis convallis platea, varius nostra primis
+            parturient nascetur etiam. Eu sociosqu neque aliquam auctor vestibulum ridiculus ligula inceptos, praesent
+            nec netus ultricies cursus congue accum.
+          </p>
+
+        </div>
+        <div class="w-100"></div>
+
+
 
         <!-- followers & following  -->
         <div class="col">
@@ -354,1128 +373,1123 @@
       </div>
     </div>
 
-          <!-- Posts  -->
-          <div class="accordion accordion-flush mb-4 mt-2 fondo container" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
-                  <h3 class="texto post-perfil ms-2">
-                    <span class="fecha">dd/mm/yyyy</span>
-                    <br>
-                    Titulo de post
-                  </h3>
-    
+    <!-- Posts  -->
+    <div class="accordion accordion-flush mb-4 mt-2 fondo container" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+            <h3 class="texto post-perfil ms-2">
+              <span class="fecha">dd/mm/yyyy</span>
+              <br>
+              Titulo de post
+            </h3>
+
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body border border-light p-4">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+            condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+            praesent
+            ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
+            tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+            scelerisque mauris vivamus. elementum.
+            <div class="d-flex mt-3">
+              <!-- Me gusta  -->
+              <div class="m-1">
+
+                <button id="like_btn" class="bton">
+                  <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                  <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
                 </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body border border-light p-4">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
-                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
-                  praesent
-                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
-                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
-                  scelerisque mauris vivamus. elementum.
-                  <div class="d-flex mt-3">
-                    <!-- Me gusta  -->
-                    <div class="m-1">
-    
-                      <button id="like_btn" class="bton">
-                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
-                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
-                      </button>
-    
-                    </div>
-    
-                    <!-- views  -->
-                    <div class="m-1">
-                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
-                      <span class="contador-likes-views">123</span>
-                    </div>
-    
-                    <!-- Comentario  -->
-                    <div class="ms-1">
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
-                        data-bs-target="#comentarios-modal">
-                        <i class="fa-regular fa-comment icons fa-xl "></i>
-    
-                      </button>
-    
-                      <!-- Modal de comentarios -->
-                      <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
-                        aria-hidden="true">
-                        <div class="modal-dialog  modal-dialog-scrollable">
-                          <div class="modal-content primario">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-    
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-    
-                              <!-- Añadire Comentario  -->
-                              <form>
-                                <div class="mb-3">
-                    
-                                  <div class="row g-3">
-                                    <form>
-                                      <div class="col-10">
-                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
-                                      </div>
-                                      <div class="col-1">
-                                        <button type="submit" class="btn">
-                                          <svg class="svg-icon " viewBox="0 0 20 20">
-                                            <path
-                                              d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
-                                            </path>
-                                          </svg>
-                                        </button>
-                                      </div>
-                                    </form>
-                                  </div>
-                    
-                                </div>
-                              </form>
-    
-                            </div>
-    
+
+              </div>
+
+              <!-- views  -->
+              <div class="m-1">
+                <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                <span class="contador-likes-views">123</span>
+              </div>
+
+              <!-- Comentario  -->
+              <div class="ms-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-link " data-bs-toggle="modal" data-bs-target="#comentarios-modal">
+                  <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                </button>
+
+                <!-- Modal de comentarios -->
+                <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
+                  aria-hidden="true">
+                  <div class="modal-dialog  modal-dialog-scrollable">
+                    <div class="modal-content primario">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
                           </div>
                         </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Añadire Comentario  -->
+                        <form>
+                          <div class="mb-3">
+
+                            <div class="row g-3">
+                              <form>
+                                <div class="col-10">
+                                  <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
+                                </div>
+                                <div class="col-1">
+                                  <button type="submit" class="btn">
+                                    <svg class="svg-icon " viewBox="0 0 20 20">
+                                      <path
+                                        d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
+                                      </path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+
+                          </div>
+                        </form>
+
                       </div>
+
                     </div>
-    
-    
-    
-                    <!-- tags  -->
-                    <div class="m-1">
-                      <div class="dropdown mb-3 d-block mx-auto">
-                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Ver tags
-                        </button>
-                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
-                          <li>
-                            <a class="dropdown-item primario" href="#">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-    
                   </div>
                 </div>
               </div>
-            </div>
-    
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
-                  <h3 class="texto post-perfil ms-2">
-                    <span class="fecha">dd/mm/yyyy</span>
-                    <br>
-                    Titulo de post
-                  </h3>
-    
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body border border-light p-4">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
-                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
-                  praesent
-                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
-                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
-                  scelerisque mauris vivamus. elementum.
-                  <div class="d-flex mt-3">
-                    <!-- Me gusta  -->
-                    <div class="m-1">
-    
-                      <button id="like_btn" class="bton">
-                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
-                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
-                      </button>
-    
-                    </div>
-    
-                    <!-- views  -->
-                    <div class="m-1">
-                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
-                      <span class="contador-likes-views">123</span>
-                    </div>
-    
-                    <!-- Comentario  -->
-                    <div class="ms-1">
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
-                        data-bs-target="#comentarios-modal">
-                        <i class="fa-regular fa-comment icons fa-xl "></i>
-    
-                      </button>
-    
-                      <!-- Modal de comentarios -->
-                      <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
-                        aria-hidden="true">
-                        <div class="modal-dialog  modal-dialog-scrollable">
-                          <div class="modal-content primario">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-    
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-    
-                              <!-- Añadire Comentario  -->
-                              <form>
-                                <div class="mb-3">
-                    
-                                  <div class="row g-3">
-                                    <form>
-                                      <div class="col-10">
-                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
-                                      </div>
-                                      <div class="col-1">
-                                        <button type="submit" class="btn">
-                                          <svg class="svg-icon " viewBox="0 0 20 20">
-                                            <path
-                                              d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
-                                            </path>
-                                          </svg>
-                                        </button>
-                                      </div>
-                                    </form>
-                                  </div>
-                    
-                                </div>
-                              </form>
-    
-                            </div>
-    
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-    
-    
-    
-                    <!-- tags  -->
-                    <div class="m-1">
-                      <div class="dropdown mb-3 d-block mx-auto">
-                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Ver tags
-                        </button>
-                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
-                          <li>
-                            <a class="dropdown-item primario" href="#">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-    
-                  </div>
+
+
+
+              <!-- tags  -->
+              <div class="m-1">
+                <div class="dropdown mb-3 d-block mx-auto">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ver tags
+                  </button>
+                  <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                      <a class="dropdown-item primario" href="#">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
             </div>
-    
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
-                  <h3 class="texto post-perfil ms-2">
-                    <span class="fecha">dd/mm/yyyy</span>
-                    <br>
-                    Titulo de post
-                  </h3>
-    
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body border border-light p-4">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
-                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
-                  praesent
-                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
-                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
-                  scelerisque mauris vivamus. elementum.
-                  <div class="d-flex mt-3">
-                    <!-- Me gusta  -->
-                    <div class="m-1">
-    
-                      <button id="like_btn" class="bton">
-                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
-                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
-                      </button>
-    
-                    </div>
-    
-                    <!-- views  -->
-                    <div class="m-1">
-                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
-                      <span class="contador-likes-views">123</span>
-                    </div>
-    
-                    <!-- Comentario  -->
-                    <div class="ms-1">
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
-                        data-bs-target="#comentarios-modal2">
-                        <i class="fa-regular fa-comment icons fa-xl "></i>
-    
-                      </button>
-    
-                      <!-- Modal de comentarios -->
-                      <div class=" modal fade" id="comentarios-modal2" tabindex="-1" aria-labelledby="comentarios-modal"
-                        aria-hidden="true">
-                        <div class="modal-dialog  modal-dialog-scrollable">
-                          <div class="modal-content primario">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="comentarios-modal2">Comentarios</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-    
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-    
-                              <!-- Añadire Comentario  -->
-                              <form>
-                                <div class="mb-3">
-                    
-                                  <div class="row g-3">
-                                    <form>
-                                      <div class="col-10">
-                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
-                                      </div>
-                                      <div class="col-1">
-                                        <button type="submit" class="btn">
-                                          <svg class="svg-icon " viewBox="0 0 20 20">
-                                            <path
-                                              d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
-                                            </path>
-                                          </svg>
-                                        </button>
-                                      </div>
-                                    </form>
-                                  </div>
-                    
-                                </div>
-                              </form>
-    
-                            </div>
-    
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-    
-    
-    
-                    <!-- tags  -->
-                    <div class="m-1">
-                      <div class="dropdown mb-3 d-block mx-auto">
-                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Ver tags
-                        </button>
-                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
-                          <li>
-                            <a class="dropdown-item primario" href="#">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-    
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
-                  <h3 class="texto post-perfil ms-2">
-                    <span class="fecha">dd/mm/yyyy</span>
-                    <br>
-                    Titulo de post
-                  </h3>
-    
-                </button>
-              </h2>
-              <div id="flush-collapseFour" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body border border-light p-4">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
-                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
-                  praesent
-                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
-                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
-                  scelerisque mauris vivamus. elementum.
-                  <div class="d-flex mt-3">
-                    <!-- Me gusta  -->
-                    <div class="m-1">
-    
-                      <button id="like_btn" class="bton">
-                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
-                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
-                      </button>
-    
-                    </div>
-    
-                    <!-- views  -->
-                    <div class="m-1">
-                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
-                      <span class="contador-likes-views">123</span>
-                    </div>
-    
-                    <!-- Comentario  -->
-                    <div class="ms-1">
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
-                        data-bs-target="#comentarios-modal3">
-                        <i class="fa-regular fa-comment icons fa-xl "></i>
-    
-                      </button>
-    
-                      <!-- Modal de comentarios -->
-                      <div class=" modal fade" id="comentarios-modal3" tabindex="-1" aria-labelledby="comentarios-modal"
-                        aria-hidden="true">
-                        <div class="modal-dialog  modal-dialog-scrollable">
-                          <div class="modal-content primario">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-    
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-    
-                              <!-- Añadire Comentario  -->
-                              <form>
-                                <div class="mb-3">
-                    
-                                  <div class="row g-3">
-                                    <form>
-                                      <div class="col-10">
-                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
-                                      </div>
-                                      <div class="col-1">
-                                        <button type="submit" class="btn">
-                                          <svg class="svg-icon " viewBox="0 0 20 20">
-                                            <path
-                                              d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
-                                            </path>
-                                          </svg>
-                                        </button>
-                                      </div>
-                                    </form>
-                                  </div>
-                    
-                                </div>
-                              </form>
-    
-                            </div>
-    
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-    
-    
-    
-                    <!-- tags  -->
-                    <div class="m-1">
-                      <div class="dropdown mb-3 d-block mx-auto">
-                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Ver tags
-                        </button>
-                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
-                          <li>
-                            <a class="dropdown-item primario" href="#">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-    
-                  </div>
-                </div>
-              </div>
-            </div>
-    
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
-                  <h3 class="texto post-perfil ms-2">
-                    <span class="fecha">dd/mm/yyyy</span>
-                    <br>
-                    Titulo de post
-                  </h3>
-    
-                </button>
-              </h2>
-              <div id="flush-collapseFive" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body border border-light p-4">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
-                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
-                  praesent
-                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
-                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
-                  scelerisque mauris vivamus. elementum.
-                  <div class="d-flex mt-3">
-                    <!-- Me gusta  -->
-                    <div class="m-1">
-    
-                      <button id="like_btn" class="bton">
-                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
-                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
-                      </button>
-    
-                    </div>
-    
-                    <!-- views  -->
-                    <div class="m-1">
-                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
-                      <span class="contador-likes-views">123</span>
-                    </div>
-    
-                    <!-- Comentario  -->
-                    <div class="ms-1">
-                      <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
-                        data-bs-target="#comentarios-modal4">
-                        <i class="fa-regular fa-comment icons fa-xl "></i>
-    
-                      </button>
-    
-                      <!-- Modal de comentarios -->
-                      <div class=" modal fade" id="comentarios-modal4" tabindex="-1" aria-labelledby="comentarios-modal"
-                        aria-hidden="true">
-                        <div class="modal-dialog  modal-dialog-scrollable">
-                          <div class="modal-content primario">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-    
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-                              <!-- Comentario -->
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <a href="#">
-                                    <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
-                                  </a>
-                                </div>
-                                <div class="col-10">
-                                  <p>
-                                    Este es mi comentario
-    
-                                    <button class="btn">
-                                      <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
-                                    </button>
-                                  </p>
-                                </div>
-                              </div>
-    
-                              <!-- Añadire Comentario  -->
-                              <form>
-                                <div class="mb-3">
-                    
-                                  <div class="row g-3">
-                                    <form>
-                                      <div class="col-10">
-                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
-                                      </div>
-                                      <div class="col-1">
-                                        <button type="submit" class="btn">
-                                          <svg class="svg-icon " viewBox="0 0 20 20">
-                                            <path
-                                              d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
-                                            </path>
-                                          </svg>
-                                        </button>
-                                      </div>
-                                    </form>
-                                  </div>
-                    
-                                </div>
-                              </form>
-    
-                            </div>
-    
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-    
-    
-    
-                    <!-- tags  -->
-                    <div class="m-1">
-                      <div class="dropdown mb-3 d-block mx-auto">
-                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Ver tags
-                        </button>
-                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
-                          <li>
-                            <a class="dropdown-item primario" href="#">
-                              <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
-                                </path>
-                              </svg>
-                              -Tag
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-    
           </div>
-  
-  
-        </main>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+            <h3 class="texto post-perfil ms-2">
+              <span class="fecha">dd/mm/yyyy</span>
+              <br>
+              Titulo de post
+            </h3>
+
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body border border-light p-4">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+            condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+            praesent
+            ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
+            tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+            scelerisque mauris vivamus. elementum.
+            <div class="d-flex mt-3">
+              <!-- Me gusta  -->
+              <div class="m-1">
+
+                <button id="like_btn" class="bton">
+                  <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                  <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                </button>
+
+              </div>
+
+              <!-- views  -->
+              <div class="m-1">
+                <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                <span class="contador-likes-views">123</span>
+              </div>
+
+              <!-- Comentario  -->
+              <div class="ms-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-link " data-bs-toggle="modal" data-bs-target="#comentarios-modal">
+                  <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                </button>
+
+                <!-- Modal de comentarios -->
+                <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
+                  aria-hidden="true">
+                  <div class="modal-dialog  modal-dialog-scrollable">
+                    <div class="modal-content primario">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Añadire Comentario  -->
+                        <form>
+                          <div class="mb-3">
+
+                            <div class="row g-3">
+                              <form>
+                                <div class="col-10">
+                                  <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
+                                </div>
+                                <div class="col-1">
+                                  <button type="submit" class="btn">
+                                    <svg class="svg-icon " viewBox="0 0 20 20">
+                                      <path
+                                        d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
+                                      </path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+
+                          </div>
+                        </form>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- tags  -->
+              <div class="m-1">
+                <div class="dropdown mb-3 d-block mx-auto">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ver tags
+                  </button>
+                  <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                      <a class="dropdown-item primario" href="#">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+            <h3 class="texto post-perfil ms-2">
+              <span class="fecha">dd/mm/yyyy</span>
+              <br>
+              Titulo de post
+            </h3>
+
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body border border-light p-4">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+            condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+            praesent
+            ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
+            tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+            scelerisque mauris vivamus. elementum.
+            <div class="d-flex mt-3">
+              <!-- Me gusta  -->
+              <div class="m-1">
+
+                <button id="like_btn" class="bton">
+                  <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                  <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                </button>
+
+              </div>
+
+              <!-- views  -->
+              <div class="m-1">
+                <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                <span class="contador-likes-views">123</span>
+              </div>
+
+              <!-- Comentario  -->
+              <div class="ms-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-link " data-bs-toggle="modal" data-bs-target="#comentarios-modal2">
+                  <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                </button>
+
+                <!-- Modal de comentarios -->
+                <div class=" modal fade" id="comentarios-modal2" tabindex="-1" aria-labelledby="comentarios-modal"
+                  aria-hidden="true">
+                  <div class="modal-dialog  modal-dialog-scrollable">
+                    <div class="modal-content primario">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="comentarios-modal2">Comentarios</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Añadire Comentario  -->
+                        <form>
+                          <div class="mb-3">
+
+                            <div class="row g-3">
+                              <form>
+                                <div class="col-10">
+                                  <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
+                                </div>
+                                <div class="col-1">
+                                  <button type="submit" class="btn">
+                                    <svg class="svg-icon " viewBox="0 0 20 20">
+                                      <path
+                                        d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
+                                      </path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+
+                          </div>
+                        </form>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- tags  -->
+              <div class="m-1">
+                <div class="dropdown mb-3 d-block mx-auto">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ver tags
+                  </button>
+                  <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                      <a class="dropdown-item primario" href="#">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+            <h3 class="texto post-perfil ms-2">
+              <span class="fecha">dd/mm/yyyy</span>
+              <br>
+              Titulo de post
+            </h3>
+
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body border border-light p-4">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+            condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+            praesent
+            ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
+            tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+            scelerisque mauris vivamus. elementum.
+            <div class="d-flex mt-3">
+              <!-- Me gusta  -->
+              <div class="m-1">
+
+                <button id="like_btn" class="bton">
+                  <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                  <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                </button>
+
+              </div>
+
+              <!-- views  -->
+              <div class="m-1">
+                <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                <span class="contador-likes-views">123</span>
+              </div>
+
+              <!-- Comentario  -->
+              <div class="ms-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-link " data-bs-toggle="modal" data-bs-target="#comentarios-modal3">
+                  <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                </button>
+
+                <!-- Modal de comentarios -->
+                <div class=" modal fade" id="comentarios-modal3" tabindex="-1" aria-labelledby="comentarios-modal"
+                  aria-hidden="true">
+                  <div class="modal-dialog  modal-dialog-scrollable">
+                    <div class="modal-content primario">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Añadire Comentario  -->
+                        <form>
+                          <div class="mb-3">
+
+                            <div class="row g-3">
+                              <form>
+                                <div class="col-10">
+                                  <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
+                                </div>
+                                <div class="col-1">
+                                  <button type="submit" class="btn">
+                                    <svg class="svg-icon " viewBox="0 0 20 20">
+                                      <path
+                                        d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
+                                      </path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+
+                          </div>
+                        </form>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- tags  -->
+              <div class="m-1">
+                <div class="dropdown mb-3 d-block mx-auto">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ver tags
+                  </button>
+                  <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                      <a class="dropdown-item primario" href="#">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed fondo border border-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+            <h3 class="texto post-perfil ms-2">
+              <span class="fecha">dd/mm/yyyy</span>
+              <br>
+              Titulo de post
+            </h3>
+
+          </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body border border-light p-4">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+            condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+            praesent
+            ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
+            tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+            scelerisque mauris vivamus. elementum.
+            <div class="d-flex mt-3">
+              <!-- Me gusta  -->
+              <div class="m-1">
+
+                <button id="like_btn" class="bton">
+                  <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                  <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                </button>
+
+              </div>
+
+              <!-- views  -->
+              <div class="m-1">
+                <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                <span class="contador-likes-views">123</span>
+              </div>
+
+              <!-- Comentario  -->
+              <div class="ms-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-link " data-bs-toggle="modal" data-bs-target="#comentarios-modal4">
+                  <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                </button>
+
+                <!-- Modal de comentarios -->
+                <div class=" modal fade" id="comentarios-modal4" tabindex="-1" aria-labelledby="comentarios-modal"
+                  aria-hidden="true">
+                  <div class="modal-dialog  modal-dialog-scrollable">
+                    <div class="modal-content primario">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Comentario -->
+                        <div class="row align-items-start">
+                          <div class="col-1">
+                            <a href="#">
+                              <img class="rounded-circle" src="../img/Logo.png" alt="Nemo" width="30" height="30">
+                            </a>
+                          </div>
+                          <div class="col-10">
+                            <p>
+                              Este es mi comentario
+
+                              <button class="btn">
+                                <i class="fa-regular fa-comment icons fa-xl mt-3"></i>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+
+                        <!-- Añadire Comentario  -->
+                        <form>
+                          <div class="mb-3">
+
+                            <div class="row g-3">
+                              <form>
+                                <div class="col-10">
+                                  <input type="text" placeholder="Comenta algo" class="form-control coment-post" id="">
+                                </div>
+                                <div class="col-1">
+                                  <button type="submit" class="btn">
+                                    <svg class="svg-icon " viewBox="0 0 20 20">
+                                      <path
+                                        d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z">
+                                      </path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+
+                          </div>
+                        </form>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- tags  -->
+              <div class="m-1">
+                <div class="dropdown mb-3 d-block mx-auto">
+                  <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ver tags
+                  </button>
+                  <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                      <a class="dropdown-item primario" href="#">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                          <path
+                            d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                          </path>
+                        </svg>
+                        -Tag
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </main>
 
 
   <footer class="position-relative position-absolute start-50 w-100 pt-3 pe-3 ps-3 secundario translate-middle-x">
