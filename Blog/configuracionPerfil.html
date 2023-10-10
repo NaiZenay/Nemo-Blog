@@ -74,18 +74,18 @@
 
                 <li>
                   <hr class="dropdown-divider">
-              </li>
+                </li>
 
-              <li>
+                <li>
                   <a class="dropdown-item texto" href="#">
-                      <svg class="svg-icon" viewBox="0 0 20 20">
-                          <path fill="none"
-                              d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
-                          </path>
-                      </svg>
-                      Cerrar sesion
+                    <svg class="svg-icon" viewBox="0 0 20 20">
+                      <path fill="none"
+                        d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z">
+                      </path>
+                    </svg>
+                    Cerrar sesion
                   </a>
-              </li>
+                </li>
               </ul>
             </li>
           </ul>
@@ -106,17 +106,17 @@
         <div class="row secundario rounded-3 p-5 mb-4">
           <div class="col">
             <ul class="list-group list-group-flush">
-
+              <!-- Nombre y Apellido-->
               <li class="list-group-item secundario">
                 Nombre:
                 <br>
-                <span>Ian</span>
+                <span>Ian Yañez</span>
                 <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Nombre_Modal">
+                <button class="btn float-end me-2" data-bs-toggle="modal" data-bs-target="#edit_Nombre_Modal">
                   <i class="fa-regular fa-pen-to-square icons"></i>
                 </button>
 
-                <!-- Modal -->
+                <!-- Modal Editar Nombre -->
                 <div class="modal fade" id="edit_Nombre_Modal" tabindex="-1" aria-labelledby="edit_Nombre_Modal"
                   aria-hidden="true">
                   <div class="modal-dialog">
@@ -145,52 +145,71 @@
                 </div>
 
               </li>
+              <!-- Acerca de :  -->
+              <li class="list-group-item secundario container">
 
-              <li class="list-group-item secundario">
-
-                Apellido:
+                Acerca de:
                 <br>
-                <span>Yañez</span>
-                <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Apellido_Modal">
-                  <i class="fa-regular fa-pen-to-square icons"></i>
-                </button>
+                <div class="row align-items-start">
+                  <p class="pe0-5 col-11 height-25 acerca_de-config">
+                    Lorem ipsum dolor sit amet consectetur adipiscing, elit curabitur nulla accumsan iaculis erat,
+                    magnis lacus aliquet quam sapien. Vestibulum litora ultrices diam iaculis duis convallis platea,
+                    varius nostra primis parturient nascetur etiam. Eu sociosqu neque aliquam auctor vestibulum
+                    ridiculus ligula inceptos, praesent nec netus ultricies cursus congue accum.
+                  </p>
+                  <!-- Boton editar -->
+                  <button class="btn col-1 mt-4" data-bs-toggle="modal" data-bs-target="#edit_Apellido_Modal">
+                    <i class="fa-regular fa-pen-to-square icons"></i>
+                  </button>
 
-                <!-- Modal -->
-                <div class="modal fade" id="edit_Apellido_Modal" tabindex="-1" aria-labelledby="edit_Apellido_Modal"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content secundario">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="edit_Apellido_Modal">Editar Apellido</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-
-                      <div class="modal-body">
-                        <div class="input-group mb-3">
-                          <input type="text" placeholder="Apellido" class="form-control coment-post" id="">
-                          <span class="input-group-text primario border-0" id="basic-addon2">
-                            <button type="submit" class="btn btn-success">
-                              Editar
-                            </button>
-                          </span>
+                  <!-- Modal -->
+                  <div class="modal fade" id="edit_Apellido_Modal" tabindex="-1" aria-labelledby="edit_Apellido_Modal"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content secundario">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="edit_Apellido_Modal">Editar Acerca de:</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                      </div>
 
+                        <div class="modal-body">
+
+                          <div class="input-group mb-3">
+                            <input type="text" placeholder=
+                            "Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+                            condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+                            praesent
+                            ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames nullam
+                            tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+                            scelerisque mauris vivamus. elementum."
+
+                            class="form-control coment-post" id="">
+                            <span class="input-group-text primario border-0" id="basic-addon2">
+                              <button type="submit" class="btn btn-success">
+                                Editar
+                              </button>
+                            </span>
+                          </div>
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+
+                      </div>
                     </div>
                   </div>
+
                 </div>
 
               </li>
+              <!-- Apodo -->
               <li class="list-group-item secundario">
                 Apodo:
                 <br>
                 <span>Nemo</span>
                 <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Apodo_Modal">
+                <button class="btn float-end me-2" data-bs-toggle="modal" data-bs-target="#edit_Apodo_Modal">
                   <i class="fa-regular fa-pen-to-square icons"></i>
                 </button>
 
@@ -223,12 +242,13 @@
                 </div>
 
               </li>
+              <!-- Correo  -->
               <li class="list-group-item secundario">
                 Correo:
                 <br>
                 <span>naizenay@gmail.com</span>
                 <!-- Boton editar -->
-                <button class="btn float-end" data-bs-toggle="modal" data-bs-target="#edit_Correo_Modal">
+                <button class="btn float-end me-2" data-bs-toggle="modal" data-bs-target="#edit_Correo_Modal">
                   <i class="fa-regular fa-pen-to-square icons"></i>
                 </button>
 
@@ -261,6 +281,7 @@
                   </div>
                 </div>
               </li>
+
             </ul>
           </div>
         </div>
