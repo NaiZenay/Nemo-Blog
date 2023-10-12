@@ -12,7 +12,7 @@ like_btn.addEventListener('click', () => {
     }else if(like_icon.classList.contains('fa-solid')){
         like_icon.classList.remove('fa-solid');
         like_icon.classList.add('fa-regular');
-    }
+    }        
 });
 
 const comment_like_container = document.querySelector('#comment_like_container');
