@@ -43,9 +43,9 @@ body {
     text-decoration: none;
 }
 
-a {
-    text-decoration: none;
-    color: #0EF6CC;
+a  {
+    text-decoration: none  !important;
+    color: #0EF6CC         !important;
 }
 
 a:hover {
@@ -96,6 +96,17 @@ a:hover {
 .comment-box {
     height: 95px;
     width: 280px;
+}
+
+.buscador{
+    color: #EEEEEE;
+    background-color: #1B2223;
+    height: 45px;
+}
+
+.buscador:focus {
+    background-color: #1B2223;
+    color: #EEEEEE;
 }
 
 /* Form de crear post */
