@@ -78,7 +78,6 @@ a:hover {
     border: none;
     display: flex;
 }
-
 .no-Visible {
     display: none;
 }
@@ -252,4 +251,8 @@ SVG Icons - svgicons.sparkk.fr
 .form-select {
     background-color: #1B2223;
     color: white;
+}
+.dropdown-item:hover{
+    background-color: #222222;
+    color:#0EF6CC;
 }
