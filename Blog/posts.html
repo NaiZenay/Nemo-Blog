@@ -109,24 +109,32 @@
 
             <!-- Boton de Crear post  -->
             <div class="container">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn d-block mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <!-- Button trigger modal-CrearPost -->
+                <button type="button" id="crearPostModalBtn" class="btn d-block mx-auto" data-bs-toggle="modal" data-bs-target="#crearPostForm">
                     <i class="fa-solid fa-circle-plus crear-post"></i>
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="crearPostForm" tabindex="-1" aria-labelledby="crearPostFormLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content secundario">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Crear Post</h5>
+                                <h5 class="modal-title" id="crearPostFormLabel">Crear Post</h5>
                                 <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
                                     <i class="fa-solid fa-xmark icons"></i>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <form action="">
+
+                                    <!-- input llenado con la info del Usuario -->
+                                    <input type="text" id="author" hidden value="Nombre de Usuario">
+
+                                    <!-- Input llenado con js Momento de la creacion del post -->
+                                    <input type="date" id="creationDate" hidden value="date">
+
+
                                     <!-- Titulo de post  -->
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control creando-Post-Form " id="floatingInput"
@@ -150,11 +158,35 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-success">Vista previa</button>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#previewPost">Vista previa</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Vista Previa-->
+                <div class="modal fade" id="previewPost" tabindex="-1" aria-labelledby="previewPost"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content secundario">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="previewPost">Vista Previa</h5>
+                                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class="fa-solid fa-xmark icons"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                             
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Volver a editar</button>
+                                <button type="button" class="btn btn-success">Publicar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <hr>
 
                 <h2 class="text-center texto"> --Posts Previos-- </h2>
@@ -473,8 +505,9 @@
         </div>
     </footer>
 
-    <script src="/js/index.js"></script>
     <script src="/js/like.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
