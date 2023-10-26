@@ -392,6 +392,7 @@
         <div id="flush-collapseOne" class="accordion-collapse collapse primario" aria-labelledby="flush-headingOne"
           data-bs-parent="#accordionFlushExample">
           <div class="accordion-body border border-light p-4">
+            <!-- body -->
             Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
             condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
             praesent
@@ -401,22 +402,30 @@
             <div class="d-flex mt-3">
               <!-- Me gusta  -->
               <div class="m-1">
-
                 <button id="like_btn" class="bton">
                   <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
                   <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
                 </button>
+              </div>
 
+                <!-- Dislike  -->
+                <div id="like_container" class="m-1">
+                  <button id="disLike_btn" class="bton">
+                      <i id="disLike_icon"
+                          class="fa-solid fa-hand-middle-finger fa-xl mt-3 icons"></i>
+                      <span id="contador_Dislikes"
+                          class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                  </button>
               </div>
 
               <!-- views  -->
-              <div class="m-1">
+              <div class="m-1 mt-1 views">
                 <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
                 <span class="contador-likes-views">123</span>
               </div>
 
               <!-- Comentario  -->
-              <div class="ms-1">
+              <div class="mt-1 ms-1">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-link " data-bs-toggle="modal" data-bs-target="#comentarios-modal">
                   <i class="fa-regular fa-comment icons fa-xl "></i>
@@ -672,7 +681,6 @@
   </footer>
 
   <script src="/js/like.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
