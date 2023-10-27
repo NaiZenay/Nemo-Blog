@@ -94,8 +94,9 @@ a:hover {
 }
 
 .comment-box {
-    height: 95px;
-    width: 280px;
+    height: 65px;
+    width: 380px;
+    margin-bottom: 0.5 rem !important;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -193,7 +194,7 @@ a:hover {
 
     .comment-box {
         height: 77px;
-        width: 200px;
+        width: 250px;
         margin-left: 15px;
     }
 
