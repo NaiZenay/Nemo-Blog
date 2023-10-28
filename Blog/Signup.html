@@ -45,13 +45,69 @@
                     <label class="texto" for="email">Apodo</label>
                 </div>
 
+                <!-- Acerca de  -->
+                <div class="form-floating mb-3">
+                    <textarea class="form-control primario login-inputs" placeholder="Leave a comment here"
+                        id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label class="texto mb-1" for="floatingTextarea2">Acerca de ti:</label>
+                </div>
+
+                <!-- Redes -->
+                <div class="accordion mb-3 fondo" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item primario border-light">
+                        <h2 class="accordion-header"id="panelsStayOpen-headingOne">
+                            <button class="accordion-button fondo" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                Añade tus redes
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+
+
+                                <!-- IG -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control primario login-inputs" id="floatingInput"
+                                        placeholder="Instagram">
+                                    <label class="texto" for="nombre">Instagram</label>
+                                </div>
+                                <!-- Github -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control primario login-inputs" id="floatingInput"
+                                        placeholder="GitHub">
+                                    <label class="texto" for="nombre">GitHub</label>
+                                </div>
+                                <!-- LinkedIn -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control primario login-inputs" id="floatingInput"
+                                        placeholder="LinkedIn">
+                                    <label class="texto" for="nombre">LinkedIn</label>
+                                </div>
+                                <!-- Otro -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control primario login-inputs" id="floatingInput"
+                                        placeholder="Otros">
+                                    <label class="texto" for="nombre">Otros</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="border border-light">
+
+
                 <div class="d-flex mx-auto row">
-                <!-- Foto  -->
+                    <!-- Foto  -->
                     <div class="col-6">
-                          <div class="mb-3">
+                        <div class="mb-3">
                             <label for="formFile" class="form-label texto">Foto</label>
                             <input class="form-control primario login-inputs" type="file" id="formFile">
-                          </div>
+                        </div>
                     </div>
                     <br>
                     <!-- Edad  -->
@@ -66,6 +122,7 @@
                 </div>
 
                 <hr class="border border-light">
+
                 <div class="form-floating mb-3">
                     <!-- Correo -->
                     <input type="email" class="form-control primario login-inputs" id="floatingInput"
