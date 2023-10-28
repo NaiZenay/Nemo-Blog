@@ -146,6 +146,10 @@ a:hover {
     color: #EEEEEE;
 }
 
+.aboutU-config-profile{
+    height: 230px !important;
+}
+
 /* Responsive */
 
 @media(max-width:480px) {
