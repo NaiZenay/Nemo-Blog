@@ -122,10 +122,11 @@
         <!-- img de perfil  -->
         <div class="col">
           <img class="author-img rounded-circle float-end m-3" src="img/Logo.png">
-          
+
           <!-- Redes -->
           <div class="mt-4 float-end">
-            <button type="button" class="bton btn-outline-secondary mt-4" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="bton btn-outline-secondary mt-4" data-bs-toggle="dropdown"
+              aria-expanded="false">
               <i class="fa-solid fa-caret-down icons"></i>
             </button>
             <ul class="dropdown-menu fondo">
@@ -140,19 +141,19 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-  
+
               <!-- linked in-->
               <li class="fondo">
                 <a class="m-1" href="#">
                   <i class="fa-brands fa-linkedin icons fa-xl"></i>
-                LinkedIn
+                  LinkedIn
                 </a>
               </li>
               <!-- Divisor -->
               <li>
                 <hr class="dropdown-divider">
               </li>
-  
+
               <!-- github-->
               <li class="fondo">
                 <a class="m-1" href="#">
@@ -169,13 +170,13 @@
                 <a class="m-1" href="#">
                   <i class="fa-solid fa-link icons fa-l"></i>
                   Otro
-                </a>  
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-    
+
         <div class="w-100"></div>
 
 
@@ -435,8 +436,7 @@
             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
             <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
             <h3 class="texto post-perfil ms-2">
-              <span class="fecha">dd/mm/yyyy</span>
-              <br>
+              <p class="fecha">Publicado el: <span id="fecha_publicacion">Fecha y hora</span></p>
               Titulo de post
             </h3>
 
@@ -495,32 +495,33 @@
                       <div class="modal-body ">
                         <!-- Comentarios -->
                         <div class="comments-container">
-                            <!-- Comentario -->
-                    <div class="row align-items-start">
-                      <!--Img Autor de comentario  -->
-                      <div class="col-1 mx-auto mt-4">
-                        <a href="#">
-                          <img class="rounded-circle mt-4 m-1" src="../img/Logo.png" alt="Nemo" width="40" height="40">
-                        </a>
-                      </div>
-                      <div class="col-10">
-                        <span class="fecha">dd/mm/yyyy</span>
+                          <!-- Comentario -->
+                          <div class="row align-items-start">
+                            <!--Img Autor de comentario  -->
+                            <div class="col-1 mx-auto mt-4">
+                              <a href="#">
+                                <img class="rounded-circle mt-4 m-1" src="../img/Logo.png" alt="Nemo" width="40"
+                                  height="40">
+                              </a>
+                            </div>
+                            <div class="col-10">
+                              <span class="fecha">dd/mm/yyyy</span>
 
-                        <p class="comment-box">
-                          Lorem ipsum dolor sit amet consectetur adipiscing elit
-                          tempor, sodales vehicula
-                          fermentum
-                          elementum dapibus velit velit.
-                        </p>
-                        <!-- like  -->
-                        <button id="comment_like_btn" class="bton">
-                          <i id="comment_like_icon" class="fa-regular fa-heart icons fa-l"></i>
-                          <span id="contador_likes" class="contador-likes-views mb-1 ms-2">123</span>
-                        </button>
-                      </div>
-                    </div>
-                    <hr>
-                   
+                              <p class="comment-box">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                tempor, sodales vehicula
+                                fermentum
+                                elementum dapibus velit velit.
+                              </p>
+                              <!-- like  -->
+                              <button id="comment_like_btn" class="bton">
+                                <i id="comment_like_icon" class="fa-regular fa-heart icons fa-l"></i>
+                                <span id="contador_likes" class="contador-likes-views mb-1 ms-2">123</span>
+                              </button>
+                            </div>
+                          </div>
+                          <hr>
+
                         </div>
 
 
