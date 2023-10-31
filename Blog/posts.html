@@ -140,12 +140,15 @@
                                         <label for="floatingInput">Titulo de Post</label>
                                     </div>
                                     <!-- Cuerpo del post  -->
-                                    <p>Describe un poco tu proyecto</p>
+                                    <p>Describe un poco tu proyecto<span class="ms-2 text-danger" id="contador_char">0</span>/100</p>
                                     <div class="form-floating mb-3">
                                         <textarea class="form-control creando-Post-Form" id="body_post"
                                             placeholder="Cuerpo de tu Post" id="floatingTextarea2"
                                             style="height: 100px"></textarea>
                                         <label for="Cuerpo del Post">Cuerpo del Post</label>
+                                        <div class="alert alert-warning mt-2 mb-3" id="body_post_alert" hidden role="alert">
+                                            Deben ser almenos 100 caracteres en el cuerpo del post
+                                          </div>
                                     </div>
 
                                     <!-- Pie de post -->

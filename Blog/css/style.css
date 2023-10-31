@@ -37,6 +37,11 @@ body {
     color: #EEEEEE;
     text-decoration: none;
 }
+.textoV2{
+    color: #0EF6CC;
+    text-decoration: none;
+    background-color: transparent;    
+}
 
 .texto:hover {
     color: #EEEEEE;
