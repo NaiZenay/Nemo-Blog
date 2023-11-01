@@ -39,7 +39,6 @@ const postData = {
 //Editar formato TO-DO
 crearPostModalBtn.addEventListener('click', () => {
     post.disabled = true;
-    const fechaCreacion = new Date;
     creationDate = moment().locale('es').format('YYYY-MM-DD, h:mm');
     postData.fecha = creationDate;
 });
@@ -50,25 +49,14 @@ title_post_Input.addEventListener('change', () => {
 
 body_post_Input.addEventListener('input', (evt) => {
     contador_char.textContent = evt.target.value.length;
-
-    if (evt.target.value.length >= 100) {
+    postData.cuerpo = body_post_Input.value;
+    if(evt.target.value.length === 420 || evt.target.value.length >= 30 ){
         body_post_alert.hidden=true;
         contador_char.classList.remove('text-danger');
-        contador_char.classList.remove('text-warning');
         contador_char.classList.add('textoV2');
-    } else if (evt.target.value.length >= 50) {
+    }else if(evt.target.value.length < 30){
         body_post_alert.hidden=false;
-        contador_char.classList.remove('text-danger');
-        contador_char.classList.remove('textoV2');
-        contador_char.classList.add('text-warning');
-    } else {
-        contador_char.classList.add('text-danger');
-        contador_char.classList.remove('textoV2');
-        contador_char.classList.remove('text-warning');
-
     }
-
-    postData.cuerpo = body_post_Input.value;
 });
 
 foot_post_Input.addEventListener('change', () => {
@@ -77,7 +65,6 @@ foot_post_Input.addEventListener('change', () => {
 });
 
 preview_Btn.addEventListener('click', () => {
-    console.log(postData);
     post.disabled = true;
     llenarPreview();
     validarCamposPost();
@@ -103,12 +90,13 @@ function llenarPreview() {
 
 function validarCamposPost() {
     if (postData.titulo.length != 0 &&
-        postData.cuerpo.length > 100) {
+        postData.cuerpo.length > 30) {
         post.disabled = false;
     }
 }
 
 function resetPostData() {
+    contador_char.textContent = '0';
     postData.cuerpo = null;
     postData.fecha = null;
     postData.pie = null;
