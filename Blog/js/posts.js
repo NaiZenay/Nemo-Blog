@@ -168,21 +168,27 @@ function limpiarHTML(selector){
 // Responsive de area de creacion de tags 
 document.addEventListener('DOMContentLoaded',()=>{
     if(screen.width <= 480 ){
-        tags_list.classList.remove('col-7') ;
-        tags_list.classList.add('col-12');   
+        tags_list.classList.remove('col-7','me-3') ;
+        tags_list.classList.add('col-10','m-2','mx-auto');
+        tags_Select.classList.add('ms-3');
     }else{
-        tags_list.classList.remove('col-12') ;
-        tags_list.classList.add('col-7'); 
+        tags_list.classList.remove('col-10','m-2','mx-auto') ;
+        tags_list.classList.add('col-7','me-3');
+        tags_Select.classList.remove('ms-3');
+        
     }
 })
 
 window.addEventListener('resize',()=>{
     if(screen.width <= 480 ){
-        tags_list.classList.remove('col-7') ;
-        tags_list.classList.add('col-12');   
+        tags_list.classList.remove('col-7','me-3') ;
+        tags_list.classList.add('col-10','m-2','mx-auto');   
+        tags_Select.classList.add('ms-3');
     }else{
-        tags_list.classList.remove('col-12') ;
-        tags_list.classList.add('col-7'); 
+        tags_list.classList.remove('col-10','m-2','mx-auto') ;
+        tags_list.classList.add('col-7','me-3'); 
+        tags_Select.classList.remove('ms-3');
+    
     }
 })
 
