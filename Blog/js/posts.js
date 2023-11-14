@@ -29,6 +29,7 @@ const pie_publicacion_preview = document.querySelector('#pie_publicacion');
 const autor_post_preview = document.querySelector('#autor_post');
 const autor_post_repsonsive = document.querySelector('#autor_post_repsonsive');
 
+const tags_list = document.querySelector('#tags_list');
 const tags_publicacion = document.querySelector('#tags_publicacion');
 const tags_publicacion_Responsive = document.querySelector('#tags_publicacion_Responsive');
 
@@ -47,7 +48,7 @@ const tags = ['Programacion', 'Diseño', 'Musica', 'Web', 'Emprendimiento'];
 let tags_Selected = [];
 
 
-//Editar formato TO-DO
+//Editar formato de fecha TO-DO
 crearPostModalBtn.addEventListener('click', () => {
     post.disabled = true;
     creationDate = moment().locale('es').format('YYYY-MM-DD, h:mm');
@@ -116,6 +117,7 @@ function resetPostData() {
     foot_post_Input.value = null;
 }
 function llenarTagsSelect(tags = []) {
+    limpiarHTML(tags_Select);
     tags.forEach(option => {
         const tag = document.createElement('option');
         tag.value = option;
@@ -162,5 +164,26 @@ function limpiarHTML(selector){
     }
 }
 
+
+// Responsive de area de creacion de tags 
+document.addEventListener('DOMContentLoaded',()=>{
+    if(screen.width <= 480 ){
+        tags_list.classList.remove('col-7') ;
+        tags_list.classList.add('col-12');   
+    }else{
+        tags_list.classList.remove('col-12') ;
+        tags_list.classList.add('col-7'); 
+    }
+})
+
+window.addEventListener('resize',()=>{
+    if(screen.width <= 480 ){
+        tags_list.classList.remove('col-7') ;
+        tags_list.classList.add('col-12');   
+    }else{
+        tags_list.classList.remove('col-12') ;
+        tags_list.classList.add('col-7'); 
+    }
+})
 
 
