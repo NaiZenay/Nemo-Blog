@@ -111,82 +111,971 @@
   <main>
     <section class="container p-2">
 
-        <form class="p-3 mb-3">
-            <div class="input-group mb-3">
-                <input disabled type="text" placeholder="Elige una forma de busqueda" class="form-control buscador mt-2 p-1" id="searchBar">
+      <!-- filtro  -->
+      <div class="dropdown p-2">
+        <button class="btn fondo btn-secondary dropdown-toggle ms-2 " type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          ¿Que quieres buscar?
+          <!-- <i class="fa-solid fa-filter icons"></i> -->
+        </button>
+        <ul class="dropdown-menu fondo" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <span class="texto p-1 m-1">Busca por:</span>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <button class="dropdown-item  primario bton" id="searchByTag">
+              Tags
+            </button>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <button class="dropdown-item  primario bton" id="searchByUser">
+              Usuario
+            </button>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <button class="dropdown-item  primario bton" id="searchByTitlePost">
+              Titulo de Post
+            </button>
+          </li>
+        </ul>
+      </div>
+      <form hidden id="searchForm" class="p-3 mb-3">
+        <!-- Input busqueda -->
+        <div class="input-group mb-3 ms-2">
+          <input disabled type="text" placeholder="Elige una forma de busqueda"
+            class="form-control buscador mt-2 p-1 rounded-pill" id="searchBar">
+          <!-- buscar bton -->
+          <span class="input-group-text fondo border-0" id="basic-addon2">
+            <button type="submit" id="buscar" class="bton p-2 mt-2 ms-2">
+              <i class="fa-solid fa-magnifying-glass fa-xl icons"></i>
+            </button>
+          </span>
+        </div>
 
-                <span class="input-group-text primario border-0" id="basic-addon2">
-                 
-                  <div class="dropdown p-2">
-                    <button class="btn fondo btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-filter icons"></i>
-                    </button>
-                    
-                    <ul class="dropdown-menu fondo" aria-labelledby="dropdownMenuButton1">
-                      <li>
-                          <span class="texto p-1 m-1">Busca por:</span> 
-                      </li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li>
-                        <button class="dropdown-item  primario bton" id="searchByTag">
-                          Tags
-                        </button>
-                      </li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li>
-                        <button class="dropdown-item  primario bton" id="searchByUser">
-                          Usuario
-                        </button>
-                      </li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li>
-                        <button class="dropdown-item  primario bton" id="searchByTitlePost">
-                          Titulo de Post
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
+      </form>
 
-                  <button type="submit" class="btn btn-success">
-                    <i class="fa-solid fa-magnifying-glass icons"></i>
-                    Buscar
+      <div id="results">
+
+        <div id="img_preResult">
+          <img class="img-fluid mx-auto" src="img/waiting.jpg">
+        </div>
+
+        <div hidden id="post_result">
+          <!-- Post  -->
+          <div class="accordion accordion-flush mb-4 mt-2 fondo container" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed fondo border border-light" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+                  <h3 class="texto post-perfil ms-2">
+                    <p class="fecha">Publicado el: <span id="fecha_publicacion">Fecha y hora</span></p>
+                    Titulo de post
+                  </h3>
+
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse primario"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body border border-light p-4">
+                  <!-- body -->
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+                  praesent
+                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames
+                  nullam
+                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+                  scelerisque mauris vivamus. elementum.
+                  <div class="d-flex mt-3">
+                    <!-- Me gusta  -->
+                    <div class="m-1">
+                      <button id="like_btn" class="bton">
+                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
                       </button>
-                </span>
+                    </div>
+
+                    <!-- Dislike  -->
+                    <div id="like_container" class="m-1">
+                      <button id="disLike_btn" class="bton">
+                        <i id="disLike_icon" class="fa-solid fa-hand-middle-finger fa-xl mt-3 icons"></i>
+                        <span id="contador_Dislikes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- views  -->
+                    <div class="m-1 mt-1 views">
+                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                      <span class="contador-likes-views">123</span>
+                    </div>
+
+                    <!-- Comentario  -->
+                    <div class="mt-1 ms-1">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
+                        data-bs-target="#comentarios-modal">
+                        <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                      </button>
+
+                      <!-- Modal de comentarios -->
+                      <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-scrollable">
+                          <div class="modal-content primario">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                              <!-- Comentarios -->
+                              <div class="comments-container">
+                                <!-- Comentario -->
+                                <div class="row align-items-start">
+                                  <!--Img Autor de comentario  -->
+                                  <div class="col-1 mx-auto mt-4">
+                                    <a href="#">
+                                      <img class="rounded-circle mt-4 m-1" src="../img/Logo.png" alt="Nemo" width="40"
+                                        height="40">
+                                    </a>
+                                  </div>
+                                  <div class="col-10">
+                                    <span class="fecha">dd/mm/yyyy</span>
+
+                                    <p class="comment-box">
+                                      Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                      tempor, sodales vehicula
+                                      fermentum
+                                      elementum dapibus velit velit.
+                                    </p>
+                                    <!-- like  -->
+                                    <button id="comment_like_btn" class="bton">
+                                      <i id="comment_like_icon" class="fa-regular fa-heart icons fa-l"></i>
+                                      <span id="contador_likes" class="contador-likes-views mb-1 ms-2">123</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <hr>
+
+                              </div>
+
+
+
+
+                              <!-- Añadir Comentario  -->
+                              <form>
+                                <div class="mb-3">
+
+                                  <div class="row g-3">
+                                    <form>
+                                      <div class="col-10">
+                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post"
+                                          id="">
+                                      </div>
+                                      <div class="col-1">
+                                        <button type="submit" class="btn">
+                                          <i class="fa-solid fa-paper-plane icons fa-xl"></i>
+
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+
+                                </div>
+                              </form>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <!-- tags  -->
+                    <div class="m-1">
+                      <div class="dropdown mb-3 d-block mx-auto">
+                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Ver tags
+                        </button>
+                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                          <li>
+                            <a class="dropdown-item primario" href="#">
+                              <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
-          </form>
+            </div>
+
+          </div>
+          <!-- Post  -->
+          <div class="accordion accordion-flush mb-4 mt-2 fondo container" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed fondo border border-light" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+                  <h3 class="texto post-perfil ms-2">
+                    <p class="fecha">Publicado el: <span id="fecha_publicacion">Fecha y hora</span></p>
+                    Titulo de post
+                  </h3>
+
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse primario"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body border border-light p-4">
+                  <!-- body -->
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+                  praesent
+                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames
+                  nullam
+                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+                  scelerisque mauris vivamus. elementum.
+                  <div class="d-flex mt-3">
+                    <!-- Me gusta  -->
+                    <div class="m-1">
+                      <button id="like_btn" class="bton">
+                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- Dislike  -->
+                    <div id="like_container" class="m-1">
+                      <button id="disLike_btn" class="bton">
+                        <i id="disLike_icon" class="fa-solid fa-hand-middle-finger fa-xl mt-3 icons"></i>
+                        <span id="contador_Dislikes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- views  -->
+                    <div class="m-1 mt-1 views">
+                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                      <span class="contador-likes-views">123</span>
+                    </div>
+
+                    <!-- Comentario  -->
+                    <div class="mt-1 ms-1">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
+                        data-bs-target="#comentarios-modal">
+                        <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                      </button>
+
+                      <!-- Modal de comentarios -->
+                      <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-scrollable">
+                          <div class="modal-content primario">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                              <!-- Comentarios -->
+                              <div class="comments-container">
+                                <!-- Comentario -->
+                                <div class="row align-items-start">
+                                  <!--Img Autor de comentario  -->
+                                  <div class="col-1 mx-auto mt-4">
+                                    <a href="#">
+                                      <img class="rounded-circle mt-4 m-1" src="../img/Logo.png" alt="Nemo" width="40"
+                                        height="40">
+                                    </a>
+                                  </div>
+                                  <div class="col-10">
+                                    <span class="fecha">dd/mm/yyyy</span>
+
+                                    <p class="comment-box">
+                                      Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                      tempor, sodales vehicula
+                                      fermentum
+                                      elementum dapibus velit velit.
+                                    </p>
+                                    <!-- like  -->
+                                    <button id="comment_like_btn" class="bton">
+                                      <i id="comment_like_icon" class="fa-regular fa-heart icons fa-l"></i>
+                                      <span id="contador_likes" class="contador-likes-views mb-1 ms-2">123</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <hr>
+
+                              </div>
 
 
 
-        <table class="table texto">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
 
+                              <!-- Añadir Comentario  -->
+                              <form>
+                                <div class="mb-3">
+
+                                  <div class="row g-3">
+                                    <form>
+                                      <div class="col-10">
+                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post"
+                                          id="">
+                                      </div>
+                                      <div class="col-1">
+                                        <button type="submit" class="btn">
+                                          <i class="fa-solid fa-paper-plane icons fa-xl"></i>
+
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+
+                                </div>
+                              </form>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <!-- tags  -->
+                    <div class="m-1">
+                      <div class="dropdown mb-3 d-block mx-auto">
+                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Ver tags
+                        </button>
+                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                          <li>
+                            <a class="dropdown-item primario" href="#">
+                              <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Post  -->
+          <div class="accordion accordion-flush mb-4 mt-2 fondo container" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed fondo border border-light" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+                  <h3 class="texto post-perfil ms-2">
+                    <p class="fecha">Publicado el: <span id="fecha_publicacion">Fecha y hora</span></p>
+                    Titulo de post
+                  </h3>
+
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse primario"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body border border-light p-4">
+                  <!-- body -->
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+                  praesent
+                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames
+                  nullam
+                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+                  scelerisque mauris vivamus. elementum.
+                  <div class="d-flex mt-3">
+                    <!-- Me gusta  -->
+                    <div class="m-1">
+                      <button id="like_btn" class="bton">
+                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- Dislike  -->
+                    <div id="like_container" class="m-1">
+                      <button id="disLike_btn" class="bton">
+                        <i id="disLike_icon" class="fa-solid fa-hand-middle-finger fa-xl mt-3 icons"></i>
+                        <span id="contador_Dislikes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- views  -->
+                    <div class="m-1 mt-1 views">
+                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                      <span class="contador-likes-views">123</span>
+                    </div>
+
+                    <!-- Comentario  -->
+                    <div class="mt-1 ms-1">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
+                        data-bs-target="#comentarios-modal">
+                        <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                      </button>
+
+                      <!-- Modal de comentarios -->
+                      <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-scrollable">
+                          <div class="modal-content primario">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                              <!-- Comentarios -->
+                              <div class="comments-container">
+                                <!-- Comentario -->
+                                <div class="row align-items-start">
+                                  <!--Img Autor de comentario  -->
+                                  <div class="col-1 mx-auto mt-4">
+                                    <a href="#">
+                                      <img class="rounded-circle mt-4 m-1" src="../img/Logo.png" alt="Nemo" width="40"
+                                        height="40">
+                                    </a>
+                                  </div>
+                                  <div class="col-10">
+                                    <span class="fecha">dd/mm/yyyy</span>
+
+                                    <p class="comment-box">
+                                      Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                      tempor, sodales vehicula
+                                      fermentum
+                                      elementum dapibus velit velit.
+                                    </p>
+                                    <!-- like  -->
+                                    <button id="comment_like_btn" class="bton">
+                                      <i id="comment_like_icon" class="fa-regular fa-heart icons fa-l"></i>
+                                      <span id="contador_likes" class="contador-likes-views mb-1 ms-2">123</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <hr>
+
+                              </div>
+
+
+
+
+                              <!-- Añadir Comentario  -->
+                              <form>
+                                <div class="mb-3">
+
+                                  <div class="row g-3">
+                                    <form>
+                                      <div class="col-10">
+                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post"
+                                          id="">
+                                      </div>
+                                      <div class="col-1">
+                                        <button type="submit" class="btn">
+                                          <i class="fa-solid fa-paper-plane icons fa-xl"></i>
+
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+
+                                </div>
+                              </form>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <!-- tags  -->
+                    <div class="m-1">
+                      <div class="dropdown mb-3 d-block mx-auto">
+                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Ver tags
+                        </button>
+                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                          <li>
+                            <a class="dropdown-item primario" href="#">
+                              <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Post  -->
+          <div class="accordion accordion-flush mb-4 mt-2 fondo container" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed fondo border border-light" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+                  <h3 class="texto post-perfil ms-2">
+                    <p class="fecha">Publicado el: <span id="fecha_publicacion">Fecha y hora</span></p>
+                    Titulo de post
+                  </h3>
+
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse primario"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body border border-light p-4">
+                  <!-- body -->
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+                  praesent
+                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames
+                  nullam
+                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+                  scelerisque mauris vivamus. elementum.
+                  <div class="d-flex mt-3">
+                    <!-- Me gusta  -->
+                    <div class="m-1">
+                      <button id="like_btn" class="bton">
+                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- Dislike  -->
+                    <div id="like_container" class="m-1">
+                      <button id="disLike_btn" class="bton">
+                        <i id="disLike_icon" class="fa-solid fa-hand-middle-finger fa-xl mt-3 icons"></i>
+                        <span id="contador_Dislikes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- views  -->
+                    <div class="m-1 mt-1 views">
+                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                      <span class="contador-likes-views">123</span>
+                    </div>
+
+                    <!-- Comentario  -->
+                    <div class="mt-1 ms-1">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
+                        data-bs-target="#comentarios-modal">
+                        <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                      </button>
+
+                      <!-- Modal de comentarios -->
+                      <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-scrollable">
+                          <div class="modal-content primario">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                              <!-- Comentarios -->
+                              <div class="comments-container">
+                                <!-- Comentario -->
+                                <div class="row align-items-start">
+                                  <!--Img Autor de comentario  -->
+                                  <div class="col-1 mx-auto mt-4">
+                                    <a href="#">
+                                      <img class="rounded-circle mt-4 m-1" src="../img/Logo.png" alt="Nemo" width="40"
+                                        height="40">
+                                    </a>
+                                  </div>
+                                  <div class="col-10">
+                                    <span class="fecha">dd/mm/yyyy</span>
+
+                                    <p class="comment-box">
+                                      Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                      tempor, sodales vehicula
+                                      fermentum
+                                      elementum dapibus velit velit.
+                                    </p>
+                                    <!-- like  -->
+                                    <button id="comment_like_btn" class="bton">
+                                      <i id="comment_like_icon" class="fa-regular fa-heart icons fa-l"></i>
+                                      <span id="contador_likes" class="contador-likes-views mb-1 ms-2">123</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <hr>
+
+                              </div>
+
+
+
+
+                              <!-- Añadir Comentario  -->
+                              <form>
+                                <div class="mb-3">
+
+                                  <div class="row g-3">
+                                    <form>
+                                      <div class="col-10">
+                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post"
+                                          id="">
+                                      </div>
+                                      <div class="col-1">
+                                        <button type="submit" class="btn">
+                                          <i class="fa-solid fa-paper-plane icons fa-xl"></i>
+
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+
+                                </div>
+                              </form>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <!-- tags  -->
+                    <div class="m-1">
+                      <div class="dropdown mb-3 d-block mx-auto">
+                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Ver tags
+                        </button>
+                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                          <li>
+                            <a class="dropdown-item primario" href="#">
+                              <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Post  -->
+          <div class="accordion accordion-flush mb-4 mt-2 fondo container" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed fondo border border-light" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <img class="author-img-posts rounded-circle me-2" src="img/Logo.png">
+                  <h3 class="texto post-perfil ms-2">
+                    <p class="fecha">Publicado el: <span id="fecha_publicacion">Fecha y hora</span></p>
+                    Titulo de post
+                  </h3>
+
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse primario"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body border border-light p-4">
+                  <!-- body -->
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit penatibus montes,
+                  condimentum justo purus ridiculus turpis cubilia vestibulum vitae dapibus pellentesque, faucibus
+                  praesent
+                  ultrices aenean aliquet molestie ut hendrerit. Fringilla habitasse faucibus dis sociosqu in fames
+                  nullam
+                  tempus, inceptos aliquam habitant suspendisse integer nunc montes sagittis, ante euismod nisi est
+                  scelerisque mauris vivamus. elementum.
+                  <div class="d-flex mt-3">
+                    <!-- Me gusta  -->
+                    <div class="m-1">
+                      <button id="like_btn" class="bton">
+                        <i id="like_icon" class="fa-regular fa-heart icons fa-xl mt-3"></i>
+                        <span id="contador_likes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- Dislike  -->
+                    <div id="like_container" class="m-1">
+                      <button id="disLike_btn" class="bton">
+                        <i id="disLike_icon" class="fa-solid fa-hand-middle-finger fa-xl mt-3 icons"></i>
+                        <span id="contador_Dislikes" class="contador-likes-views mt-2 mb-1 ms-2">123</span>
+                      </button>
+                    </div>
+
+                    <!-- views  -->
+                    <div class="m-1 mt-1 views">
+                      <i class="fa-regular fa-eye icons fa-xl mt-3"></i>
+                      <span class="contador-likes-views">123</span>
+                    </div>
+
+                    <!-- Comentario  -->
+                    <div class="mt-1 ms-1">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-link " data-bs-toggle="modal"
+                        data-bs-target="#comentarios-modal">
+                        <i class="fa-regular fa-comment icons fa-xl "></i>
+
+                      </button>
+
+                      <!-- Modal de comentarios -->
+                      <div class=" modal fade" id="comentarios-modal" tabindex="-1" aria-labelledby="comentarios-modal"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-scrollable">
+                          <div class="modal-content primario">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="comentarios-modal">Comentarios</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body ">
+                              <!-- Comentarios -->
+                              <div class="comments-container">
+                                <!-- Comentario -->
+                                <div class="row align-items-start">
+                                  <!--Img Autor de comentario  -->
+                                  <div class="col-1 mx-auto mt-4">
+                                    <a href="#">
+                                      <img class="rounded-circle mt-4 m-1" src="../img/Logo.png" alt="Nemo" width="40"
+                                        height="40">
+                                    </a>
+                                  </div>
+                                  <div class="col-10">
+                                    <span class="fecha">dd/mm/yyyy</span>
+
+                                    <p class="comment-box">
+                                      Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                      tempor, sodales vehicula
+                                      fermentum
+                                      elementum dapibus velit velit.
+                                    </p>
+                                    <!-- like  -->
+                                    <button id="comment_like_btn" class="bton">
+                                      <i id="comment_like_icon" class="fa-regular fa-heart icons fa-l"></i>
+                                      <span id="contador_likes" class="contador-likes-views mb-1 ms-2">123</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <hr>
+
+                              </div>
+
+
+
+
+                              <!-- Añadir Comentario  -->
+                              <form>
+                                <div class="mb-3">
+
+                                  <div class="row g-3">
+                                    <form>
+                                      <div class="col-10">
+                                        <input type="text" placeholder="Comenta algo" class="form-control coment-post"
+                                          id="">
+                                      </div>
+                                      <div class="col-1">
+                                        <button type="submit" class="btn">
+                                          <i class="fa-solid fa-paper-plane icons fa-xl"></i>
+
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+
+                                </div>
+                              </form>
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <!-- tags  -->
+                    <div class="m-1">
+                      <div class="dropdown mb-3 d-block mx-auto">
+                        <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Ver tags
+                        </button>
+                        <ul class="dropdown-menu primario" aria-labelledby="dropdownMenuButton1">
+                          <li>
+                            <a class="dropdown-item primario" href="#">
+                              <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item primario" href="#"><svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                  d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+                                </path>
+                              </svg>
+                              -Tag
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div hidden id="user_result">
+        </div>
+      </div>
     </section>
   </main>
 
