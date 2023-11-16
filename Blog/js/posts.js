@@ -9,6 +9,12 @@ const body_post_Input = document.querySelector('#body_post');
 const foot_post_Input = document.querySelector('#foot_post');
 const tags_Select = document.querySelector('#tags_Select');
 const tags_selected = document.querySelector('#tags_selected');
+const abrirCreacionTag = document.querySelector('#abrirCreacionTag');
+const formCrearTag = document.querySelector('#formCrearTag');
+const crearTagInput = document.querySelector('#crearTagInput');
+const crearTagBtn = document.querySelector('#crearTagBtn');
+const crearTagModal = document.querySelector('#crearTag');
+const crearTagContainer = document.querySelector('#crearTagContainer');
 
 //Buttons
 const cancel_Btn = document.querySelector('#cancel');
@@ -85,9 +91,19 @@ back_edit_Btn.addEventListener('click', () => {
 cancel_Btn.addEventListener('click', () => {
     resetPostData();
 });
-
+abrirCreacionTag.addEventListener('click', () => {
+    crearTagContainer.classList.remove('no-Visible');
+});
+crearTagBtn.addEventListener('click',crearTag);
+crearTagInput.addEventListener('input', (e) => {
+    console.log(e.target.value);
+    if(e.target.value === null || e.target.value === '' || e.target.value === ' '){
+        crearTagBtn.disabled=true;
+    }else{
+        crearTagBtn.disabled=false;
+    }
+});
 tags_Select.addEventListener('change', mostrarTags);
-
 function llenarPreview() {
     fecha_publicacion_preview.textContent = postData.fecha;
     titulo_publicacion_preview.textContent = postData.titulo;
@@ -97,14 +113,12 @@ function llenarPreview() {
     autor_post_repsonsive.textContent = postData.autor;
     llenarTagsPreview();
 }
-
 function validarCamposPost() {
     if (postData.titulo.length != 0 &&
         postData.cuerpo.length > 30) {
         post.disabled = false;
     }
 }
-
 function resetPostData() {
     contador_char.textContent = '0';
     postData.cuerpo = null;
@@ -125,7 +139,6 @@ function llenarTagsSelect(tags = []) {
         tags_Select.appendChild(tag);
     });
 }
-
 function mostrarTags(e) {
     const tag = document.createElement('LI');
     tags_Selected.push(e.target.value);
@@ -142,53 +155,81 @@ function mostrarTags(e) {
     })
 
 }
-
 function llenarTagsPreview() {
     limpiarHTML(tags_publicacion);
     limpiarHTML(tags_publicacion_Responsive);
     tags_Selected.forEach(tag => {
         const li_tag = document.createElement('LI');
-        li_tag.classList.add('dropdown-item','primario');
-        li_tag.innerHTML=`
+        li_tag.classList.add('dropdown-item', 'primario');
+        li_tag.innerHTML = `
+        <i class="fa-solid fa-tag icons"></i>
+        ${tag}
+        `
+        const li_tag_Responsive = document.createElement('LI');
+        li_tag_Responsive.classList.add('dropdown-item', 'primario');
+        li_tag_Responsive.innerHTML = `
         <i class="fa-solid fa-tag icons"></i>
         ${tag}
         `
         tags_publicacion.appendChild(li_tag);
-        tags_publicacion_Responsive.appendChild(li_tag);
+
+        tags_publicacion_Responsive.appendChild(li_tag_Responsive);
     })
 }
-
-function limpiarHTML(selector){
-    while(selector.firstChild){
+function limpiarHTML(selector) {
+    while (selector.firstChild) {
         selector.removeChild(selector.firstChild);
     }
 }
+function crearTag(e) {
+    e.preventDefault();
+    tags.push(crearTagInput.value);
+    console.log(tags);
+    llenarTagsSelect(tags);
+    crearAlerta('exito',`Tag:${crearTagInput.value} creada`, crearTagContainer);
+    setTimeout(() => {
+        crearTagContainer.classList.add('no-Visible');
+    }, 2000);
+}
+function crearAlerta(tipoAlerta, mensaje, spawn) {
+    const alerta = document.createElement('DIV');
+    if (tipoAlerta === 'error') {
+        alerta.classList.add('alert', 'alert-danger');
+    } else if (tipoAlerta === 'exito') {
+        alerta.classList.add('alert', 'alert-success');
+    }
+    alerta.textContent = mensaje;
+    spawn.appendChild(alerta);
+    setTimeout(() => {
+        alerta.remove();
+    }, 2000);
 
 
+}
 // Responsive de area de creacion de tags 
-document.addEventListener('DOMContentLoaded',()=>{
-    if(screen.width <= 480 ){
-        tags_list.classList.remove('col-7','me-3') ;
-        tags_list.classList.add('col-10','m-2','mx-auto');
+document.addEventListener('DOMContentLoaded', () => {
+    if (screen.width <= 480) {
+        tags_list.classList.remove('col-7', 'me-3');
+        tags_list.classList.add('col-10', 'm-2', 'mx-auto');
         tags_Select.classList.add('ms-3');
-    }else{
-        tags_list.classList.remove('col-10','m-2','mx-auto') ;
-        tags_list.classList.add('col-7','me-3');
+    } else {
+        tags_list.classList.remove('col-10', 'm-2', 'mx-auto');
+        tags_list.classList.add('col-7', 'me-3');
         tags_Select.classList.remove('ms-3');
-        
+
     }
 })
 
-window.addEventListener('resize',()=>{
-    if(screen.width <= 480 ){
-        tags_list.classList.remove('col-7','me-3') ;
-        tags_list.classList.add('col-10','m-2','mx-auto');   
+window.addEventListener('resize', () => {
+    if (screen.width <= 480) {
+        tags_list.classList.remove('col-7', 'me-3');
+        tags_list.classList.add('col-10', 'm-2', 'mx-auto');
         tags_Select.classList.add('ms-3');
-    }else{
-        tags_list.classList.remove('col-10','m-2','mx-auto') ;
-        tags_list.classList.add('col-7','me-3'); 
+    } else {
+        tags_list.classList.remove('col-10', 'm-2', 'mx-auto');
+        tags_list.classList.add('col-7', 'me-3');
         tags_Select.classList.remove('ms-3');
-    
+
     }
 })
 

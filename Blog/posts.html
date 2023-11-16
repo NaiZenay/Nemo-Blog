@@ -162,25 +162,40 @@
                   <p>Selecciona la categoria de tu proyecto</p>
                   <div class="row">
                     <div class="col">
-                      <select class="form-select creando-Post-Form m-1 mb-2" id="tags_Select"
+                      <select style="width: 150px;" class="form-select creando-Post-Form m-1 mb-2" id="tags_Select"
                         aria-label="Default select example">
                         <option selected hidden>Tags</option>
                       </select>
                     </div>
 
                     <div class="col">
-                      <button style="height:36px;" disabled class="p-1 pe-2 ps-2 mb-2 btn btn-success m-1">Crear Tag</button>
+                      <button style="height:36px;" type="button" data-bs-toggle="modal" id="abrirCreacionTag"class="p-1 pe-2 ps-2 mb-2 btn btn-success m-1">Crear
+                        Tag</button>
                     </div>
-                    
 
                     <div id="tags_list" class="container col-7 me-3 border p-2 border-light rounded-3 fs-6">
                       <p class="texto">Tags:</p>
                       <ul id="tags_selected">
-                      <!-- Llenado con js -->
+                        <!-- Llenado con js -->
                       </ul>
                     </div>
 
-                    
+                    <!-- Crear Tag  -->
+                    <div id="crearTagContainer" class="no-Visible container p-2 mt-2">
+                      <form id="formCrearTag" action="">
+                        <div class="input-group mb-3">
+                          <input type="text" id="crearTagInput" placeholder="Nombre de Tag"
+                            class="form-control coment-post">
+                          <span class="input-group-text primario border-0" id="basic-addon2">
+                            <button disabled type="button" id="crearTagBtn" class="btn btn-success">
+                              Crear Tag
+                            </button>
+                          </span>
+                        </div>
+                      </form>
+                    </div>
+               
+
                   </div>
                 </form>
               </div>
@@ -256,7 +271,8 @@
                                       id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       Ver tags
                                     </button>
-                                    <ul class="dropdown-menu primario" id="tags_publicacion_Responsive" aria-labelledby="dropdownMenuButton1">
+                                    <ul class="dropdown-menu primario" id="tags_publicacion_Responsive"
+                                      aria-labelledby="dropdownMenuButton1">
                                       <!-- LLenado con js  -->
                                     </ul>
                                   </div>
