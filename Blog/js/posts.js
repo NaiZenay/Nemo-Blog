@@ -2,7 +2,6 @@
 let creationDate;
 const author = document.querySelector('#author');
 
-
 // inputs creacion de post 
 const title_post_Input = document.querySelector('#title_post');
 const body_post_Input = document.querySelector('#body_post');
@@ -39,10 +38,7 @@ const tags_list = document.querySelector('#tags_list');
 const tags_publicacion = document.querySelector('#tags_publicacion');
 const tags_publicacion_Responsive = document.querySelector('#tags_publicacion_Responsive');
 
-
-
 // const patronURL = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
-
 const postData = {
     titulo: null,
     cuerpo: null,
@@ -52,7 +48,6 @@ const postData = {
 }
 const tags = ['Programacion', 'Diseño', 'Musica', 'Web', 'Emprendimiento'];
 let tags_Selected = [];
-
 
 //Editar formato de fecha TO-DO
 crearPostModalBtn.addEventListener('click', () => {
@@ -218,8 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tags_Select.classList.remove('ms-3');
 
     }
-})
-
+});
 window.addEventListener('resize', () => {
     if (screen.width <= 480) {
         tags_list.classList.remove('col-7', 'me-3');
@@ -231,6 +225,6 @@ window.addEventListener('resize', () => {
         tags_Select.classList.remove('ms-3');
 
     }
-})
+});
 
 
