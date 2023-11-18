@@ -3,15 +3,18 @@ let creationDate;
 const author = document.querySelector('#author');
 
 // inputs creacion de post 
+const title_container = document.querySelector('#title_container');
 const title_post_Input = document.querySelector('#title_post');
+const body_container = document.querySelector('body_container');
 const body_post_Input = document.querySelector('#body_post');
+const contador_char = document.querySelector('#contador_char');
+const foot_container = document.querySelector('#foot_container');
 const foot_post_Input = document.querySelector('#foot_post');
 const tags_Select = document.querySelector('#tags_Select');
 const tags_selected = document.querySelector('#tags_selected');
 const abrirCreacionTag = document.querySelector('#abrirCreacionTag');
 const formCrearTag = document.querySelector('#formCrearTag');
 const crearTagInput = document.querySelector('#crearTagInput');
-const crearTagBtn = document.querySelector('#crearTagBtn');
 const crearTagModal = document.querySelector('#crearTag');
 const crearTagContainer = document.querySelector('#crearTagContainer');
 
@@ -20,15 +23,19 @@ const cancel_Btn = document.querySelector('#cancel');
 const preview_Btn = document.querySelector('#preview');
 const back_edit_Btn = document.querySelector('#back_edit');
 const post = document.querySelector('#post');
+const crearTagBtn = document.querySelector('#crearTagBtn');
+
+
+//Alerts
+const title_post_alert = document.querySelector('#title_post_alert');
+const body_post_alert = document.querySelector('#body_post_alert');
+const foot_post_alert = document.querySelector('#foot_post_alert');
 
 
 // Preview post 
 const fecha_publicacion_preview = document.querySelector('#fecha_publicacion');
 const titulo_publicacion_preview = document.querySelector('#titulo_publicacion');
-
 const cuerpo_publicacion_preview = document.querySelector('#cuerpo_publicacion');
-const contador_char = document.querySelector('#contador_char');
-const body_post_alert = document.querySelector('#body_post_alert');
 
 const pie_publicacion_preview = document.querySelector('#pie_publicacion');
 const autor_post_preview = document.querySelector('#autor_post');
@@ -38,7 +45,7 @@ const tags_list = document.querySelector('#tags_list');
 const tags_publicacion = document.querySelector('#tags_publicacion');
 const tags_publicacion_Responsive = document.querySelector('#tags_publicacion_Responsive');
 
-// const patronURL = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+
 const postData = {
     titulo: null,
     cuerpo: null,
@@ -46,8 +53,16 @@ const postData = {
     fecha: null,
     autor: author.value
 }
+const camposValidados = {
+    titulo: false,
+    cuerpo: false,
+    pie: false,
+    tag: false
+}
 const tags = ['Programacion', 'Diseño', 'Musica', 'Web', 'Emprendimiento'];
 let tags_Selected = [];
+
+
 
 //Editar formato de fecha TO-DO
 crearPostModalBtn.addEventListener('click', () => {
@@ -58,26 +73,43 @@ crearPostModalBtn.addEventListener('click', () => {
 });
 title_post_Input.addEventListener('change', () => {
     postData.titulo = title_post_Input.value;
+    if (title_post_Input.value === '' || title_post_Input.value === null || title_post_Input.value === ' ') {
+        title_post_alert.hidden = false;
+        camposValidados.titulo = false;
+    } else {
+        title_post_alert.hidden = true;
+        camposValidados.titulo = true;
+    }
 });
 body_post_Input.addEventListener('input', (evt) => {
+
     contador_char.textContent = evt.target.value.length;
     postData.cuerpo = body_post_Input.value;
-    if (evt.target.value.length === 420 || evt.target.value.length >= 30) {
+    if (evt.target.value.length >= 30) {
         body_post_alert.hidden = true;
         contador_char.classList.remove('text-danger');
         contador_char.classList.add('textoV2');
+        camposValidados.cuerpo = true;
     } else if (evt.target.value.length < 30) {
+        contador_char.classList.add('text-danger');
+        contador_char.classList.remove('textoV2');
         body_post_alert.hidden = false;
+        camposValidados.cuerpo = false;
     }
 });
 foot_post_Input.addEventListener('change', () => {
     postData.pie = foot_post_Input.value;
+    if (validateLink(postData.pie) || foot_post_Input.value === null) {
+        foot_post_alert.hidden = true;
+        camposValidados.pie = true;
+    } else {
+        foot_post_alert.hidden = false;
+        camposValidados.pie = false;
+    }
 
 });
 preview_Btn.addEventListener('click', () => {
-    post.disabled = true;
     llenarPreview();
-    validarCamposPost();
 });
 back_edit_Btn.addEventListener('click', () => {
     post.disabled = true;
@@ -89,16 +121,18 @@ cancel_Btn.addEventListener('click', () => {
 abrirCreacionTag.addEventListener('click', () => {
     crearTagContainer.classList.remove('no-Visible');
 });
-crearTagBtn.addEventListener('click',crearTag);
+crearTagBtn.addEventListener('click', crearTag);
 crearTagInput.addEventListener('input', (e) => {
-    console.log(e.target.value);
-    if(e.target.value === null || e.target.value === '' || e.target.value === ' '){
-        crearTagBtn.disabled=true;
-    }else{
-        crearTagBtn.disabled=false;
+    if (e.target.value === null || e.target.value === '' || e.target.value === ' ') {
+        crearTagBtn.disabled = true;
+    } else {
+        crearTagBtn.disabled = false;
     }
 });
 tags_Select.addEventListener('change', mostrarTags);
+
+
+
 function llenarPreview() {
     fecha_publicacion_preview.textContent = postData.fecha;
     titulo_publicacion_preview.textContent = postData.titulo;
@@ -109,9 +143,14 @@ function llenarPreview() {
     llenarTagsPreview();
 }
 function validarCamposPost() {
-    if (postData.titulo.length != 0 &&
-        postData.cuerpo.length > 30) {
-        post.disabled = false;
+    if (camposValidados.titulo &&
+        camposValidados.cuerpo &&
+        camposValidados.pie &&
+        camposValidados.tag
+    ){
+        post.disabled=false;
+    }else{
+        post.disabled=true;
     }
 }
 function resetPostData() {
@@ -181,25 +220,18 @@ function crearTag(e) {
     tags.push(crearTagInput.value);
     console.log(tags);
     llenarTagsSelect(tags);
-    crearAlerta('exito',`Tag:${crearTagInput.value} creada`, crearTagContainer);
+    const mensaje = document.createElement('DIV')
+    mensaje.classList.add('alert', 'alert-success');
+    mensaje.textContent = `Tag "${crearTagInput.value}" creada`;
+    crearTagContainer.appendChild(mensaje);
     setTimeout(() => {
+        mensaje.remove();
         crearTagContainer.classList.add('no-Visible');
     }, 2000);
 }
-function crearAlerta(tipoAlerta, mensaje, spawn) {
-    const alerta = document.createElement('DIV');
-    if (tipoAlerta === 'error') {
-        alerta.classList.add('alert', 'alert-danger');
-    } else if (tipoAlerta === 'exito') {
-        alerta.classList.add('alert', 'alert-success');
-    }
-    alerta.textContent = mensaje;
-    spawn.appendChild(alerta);
-    setTimeout(() => {
-        alerta.remove();
-    }, 2000);
-
-
+function validateLink(link) {
+    const patronURL = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+    return patronURL.test(link);
 }
 // Responsive de area de creacion de tags 
 document.addEventListener('DOMContentLoaded', () => {
