@@ -71,7 +71,7 @@ crearPostModalBtn.addEventListener('click', () => {
     postData.fecha = creationDate;
     llenarTagsSelect(tags);
 });
-title_post_Input.addEventListener('change', () => {
+title_post_Input.addEventListener('input', () => {
     postData.titulo = title_post_Input.value;
     if (title_post_Input.value === '' || title_post_Input.value === null || title_post_Input.value === ' ') {
         title_post_alert.hidden = false;
@@ -141,16 +141,17 @@ function llenarPreview() {
     autor_post_preview.textContent = postData.autor;
     autor_post_repsonsive.textContent = postData.autor;
     llenarTagsPreview();
+    validarCamposPost();
 }
 function validarCamposPost() {
     if (camposValidados.titulo &&
         camposValidados.cuerpo &&
         camposValidados.pie &&
         camposValidados.tag
-    ){
-        post.disabled=false;
-    }else{
-        post.disabled=true;
+    ) {
+        post.disabled = false;
+    } else {
+        post.disabled = true;
     }
 }
 function resetPostData() {
@@ -186,7 +187,12 @@ function mostrarTags(e) {
     btnClose.addEventListener('click', () => {
         tag.remove()
         tags_Selected.pop(tag);
-    })
+    });
+    if(tags_Selected.length!==0){
+        camposValidados.tag=true;
+    }else{
+        camposValidados.tag=false;
+    }
 
 }
 function llenarTagsPreview() {

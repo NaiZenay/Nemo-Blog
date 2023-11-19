@@ -4,6 +4,7 @@ const like_icon = document.querySelector('#like_icon');
 const disLike_btn = document.querySelector('#disLike_btn');
 const contador_likes = document.querySelector('#contador_likes');
 const contador_Dislikes = document.querySelector('#contador_Dislikes');
+
 let countlikes = 0;
 let countDislikes = 0;
 
@@ -57,15 +58,22 @@ const comment_like_btn = document.querySelector('#comment_like_btn');
 const comment_like_icon = document.querySelector('#comment_like_icon');
 const comment_contador_likes = document.querySelector('#comment_contador_likes')
 
+let countlikes_comment = 0;
+
 
 comment_like_btn.addEventListener('click', () => {
     if (comment_like_icon.classList.contains('fa-regular')) {
         comment_like_icon.classList.remove('fa-regular');
         comment_like_icon.classList.add('fa-solid');
+        countlikes_comment++;
+        comment_contador_likes.textContent=`${countlikes_comment}`;
+
         return;
     } else if (comment_like_icon.classList.contains('fa-solid')) {
         comment_like_icon.classList.remove('fa-solid');
         comment_like_icon.classList.add('fa-regular');
+        countlikes_comment--;
+        comment_contador_likes.textContent=`${countlikes_comment}`;
     }
 });
 
