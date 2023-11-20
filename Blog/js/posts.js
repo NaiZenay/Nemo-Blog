@@ -4,12 +4,16 @@ const author = document.querySelector('#author');
 
 // inputs creacion de post 
 const title_container = document.querySelector('#title_container');
+const contador_char_title = document.querySelector('#contador_char_title');
 const title_post_Input = document.querySelector('#title_post');
+
 const body_container = document.querySelector('body_container');
 const body_post_Input = document.querySelector('#body_post');
-const contador_char = document.querySelector('#contador_char');
+const contador_char_body = document.querySelector('#contador_char_body');
+
 const foot_container = document.querySelector('#foot_container');
 const foot_post_Input = document.querySelector('#foot_post');
+
 const tags_Select = document.querySelector('#tags_Select');
 const tags_selected = document.querySelector('#tags_selected');
 const abrirCreacionTag = document.querySelector('#abrirCreacionTag');
@@ -73,26 +77,32 @@ crearPostModalBtn.addEventListener('click', () => {
 });
 title_post_Input.addEventListener('input', () => {
     postData.titulo = title_post_Input.value;
-    if (title_post_Input.value === '' || title_post_Input.value === null || title_post_Input.value === ' ') {
+    contador_char_title.textContent = title_post_Input.value.length;
+    if ((title_post_Input.value === '' || title_post_Input.value === null || title_post_Input.value === ' ')&&(title_post_Input.value.length<0)) {
+        contador_char_title.classList.add('text-danger');
+        contador_char_title.classList.remove('textoV2');
         title_post_alert.hidden = false;
         camposValidados.titulo = false;
     } else {
+        contador_char_title.classList.remove('text-danger');
+        contador_char_title.classList.add('textoV2');
         title_post_alert.hidden = true;
         camposValidados.titulo = true;
     }
+
 });
 body_post_Input.addEventListener('input', (evt) => {
 
-    contador_char.textContent = evt.target.value.length;
+    contador_char_body.textContent = evt.target.value.length;
     postData.cuerpo = body_post_Input.value;
     if (evt.target.value.length >= 30) {
         body_post_alert.hidden = true;
-        contador_char.classList.remove('text-danger');
-        contador_char.classList.add('textoV2');
+        contador_char_body.classList.remove('text-danger');
+        contador_char_body.classList.add('textoV2');
         camposValidados.cuerpo = true;
     } else if (evt.target.value.length < 30) {
-        contador_char.classList.add('text-danger');
-        contador_char.classList.remove('textoV2');
+        contador_char_body.classList.add('text-danger');
+        contador_char_body.classList.remove('textoV2');
         body_post_alert.hidden = false;
         camposValidados.cuerpo = false;
     }
@@ -155,7 +165,7 @@ function validarCamposPost() {
     }
 }
 function resetPostData() {
-    contador_char.textContent = '0';
+    contador_char_body.textContent = '0';
     postData.cuerpo = null;
     postData.fecha = null;
     postData.pie = null;
