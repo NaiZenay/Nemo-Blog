@@ -63,7 +63,7 @@ const camposValidados = {
     pie: false,
     tag: false
 }
-const tags = ['Programacion', 'Diseño', 'Musica', 'Web', 'Emprendimiento'];
+let tags = ['Tags','Programacion', 'Diseño', 'Musica', 'Web', 'Emprendimiento'];
 let tags_Selected = [];
 
 
@@ -175,33 +175,45 @@ function resetPostData() {
     body_post_Input.value = null;
     foot_post_Input.value = null;
 }
-function llenarTagsSelect(tags = []) {
+function llenarTagsSelect(tags) {
     limpiarHTML(tags_Select);
     tags.forEach(option => {
         const tag = document.createElement('option');
+        if(option.textContent === 'Tags') {
+            option.selected = true;
+            option.disabled = true;
+        }
         tag.value = option;
         tag.textContent = option;
         tags_Select.appendChild(tag);
     });
 }
 function mostrarTags(e) {
-    const tag = document.createElement('LI');
-    tags_Selected.push(e.target.value);
-    tag.textContent = e.target.value;
-    tags_selected.appendChild(tag);
-    const btnClose = document.createElement('BUTTON');
-    btnClose.classList.add('btn');
-    btnClose.innerHTML = `<i class="fa-solid fa-xmark icons"></i>`;
-    tag.appendChild(btnClose);
-
-    btnClose.addEventListener('click', () => {
-        tag.remove()
-        tags_Selected.pop(tag);
-    });
-    if(tags_Selected.length!==0){
-        camposValidados.tag=true;
-    }else{
-        camposValidados.tag=false;
+    if(!tags_Selected.includes(e.target.value)) {
+        const tag = document.createElement('LI');
+        tags_Selected.push(e.target.value);
+        tag.textContent = e.target.value;
+        tags_selected.appendChild(tag);
+        const btnClose = document.createElement('BUTTON');
+        btnClose.classList.add('btn', e.target.value);
+        btnClose.innerHTML = `<i class="fa-solid fa-xmark icons"></i>`;
+        tag.appendChild(btnClose);
+    
+        btnClose.addEventListener('click', () => {
+            tag.remove()
+            tags_Selected.pop(tag);
+            tags.push(tag.textContent);
+            llenarTagsSelect(tags);
+        }); 
+        console.log(e.target.value  )
+        tags = tags.filter((tag) => tag !== e.target.value);
+        llenarTagsSelect(tags);
+        console.log(tags_Selected);
+        if(tags_Selected.length!==0){
+            camposValidados.tag=true;
+        }else{
+            camposValidados.tag=false;
+        }
     }
 
 }
